@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SystemWypozyczaniaKsiazek
+namespace Projekt_POiG
 {
-    class UsunUzytkownika
+    class User
     {
     }
 }
