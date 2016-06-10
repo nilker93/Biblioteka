@@ -1,1 +1,10 @@
 C:\Users\Adam\Documents\GitHub\Projekt POiG\Projekt POiG\bin\Debug\Projekt POiG.exe.config
+D:\Games\GitHub projekt\Biblioteka\Projekt\Projekt POiG\Projekt POiG\bin\Debug\Projekt POiG.exe.config
+D:\Games\GitHub projekt\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.Properties.Resources.resources
+D:\Games\GitHub projekt\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.rejestracja.resources
+D:\Games\GitHub projekt\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.użytkownicy.resources
+D:\Games\GitHub projekt\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\Projekt POiG.csproj.GenerateResource.Cache
+D:\Games\GitHub projekt\Biblioteka\Projekt\Projekt POiG\Projekt POiG\bin\Debug\Projekt POiG.exe
+D:\Games\GitHub projekt\Biblioteka\Projekt\Projekt POiG\Projekt POiG\bin\Debug\Projekt POiG.pdb
+D:\Games\GitHub projekt\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\Projekt POiG.exe
+D:\Games\GitHub projekt\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\Projekt POiG.pdb

@@ -7,14 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data;
-using MySql.Data.MySqlClient;
 
 namespace Projekt_POiG
 {
-    public partial class Form1 : Form
+    public partial class użytkownicy : Form
     {
-        public Form1()
+        public użytkownicy()
         {
             InitializeComponent();
         }
