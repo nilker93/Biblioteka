@@ -8,3 +8,14 @@ D:\Games\GitHub projekt\Biblioteka\Projekt\Projekt POiG\Projekt POiG\bin\Debug\P
 D:\Games\GitHub projekt\Biblioteka\Projekt\Projekt POiG\Projekt POiG\bin\Debug\Projekt POiG.pdb
 D:\Games\GitHub projekt\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\Projekt POiG.exe
 D:\Games\GitHub projekt\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\Projekt POiG.pdb
+D:\c#biblioteka\Biblioteka\Projekt\Biblioteka\Projekt\Projekt POiG\Projekt POiG\bin\Debug\Projekt POiG.exe.config
+D:\c#biblioteka\Biblioteka\Projekt\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\Projekt POiG.exe
+D:\c#biblioteka\Biblioteka\Projekt\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\Projekt POiG.pdb
+D:\c#biblioteka\Biblioteka\Projekt\Biblioteka\Projekt\Projekt POiG\Projekt POiG\bin\Debug\Projekt POiG.exe
+D:\c#biblioteka\Biblioteka\Projekt\Biblioteka\Projekt\Projekt POiG\Projekt POiG\bin\Debug\Projekt POiG.pdb
+D:\c#biblioteka\Biblioteka\Projekt\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\Projekt POiG.csprojResolveAssemblyReference.cache
+D:\c#biblioteka\Biblioteka\Projekt\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.Form1.resources
+D:\c#biblioteka\Biblioteka\Projekt\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.Properties.Resources.resources
+D:\c#biblioteka\Biblioteka\Projekt\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.rejestracja.resources
+D:\c#biblioteka\Biblioteka\Projekt\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.użytkownicy.resources
+D:\c#biblioteka\Biblioteka\Projekt\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\Projekt POiG.csproj.GenerateResource.Cache

@@ -18,5 +18,53 @@ namespace Projekt_POiG
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string constring = "SERVER=localhost;DATABASE=biblioteka;UID=root;password=";
+                string sUprawnienia = "";
+                string[] tab = new string[16];
+                string Query = "select * from users WHERE haslo like'" + textBox2.Text + "' and login like '" + textBox1.Text + "' ;";
+                MySqlConnection myConn = new MySqlConnection(constring);
+
+                MySqlDataReader myReader;
+                MySqlCommand cmdDataBase = new MySqlCommand(Query, myConn);
+                myConn.Open();
+                myReader = cmdDataBase.ExecuteReader();
+                int licz = 0;
+                while (myReader.Read())
+                {
+                    licz = licz + 1;
+                    // sUprawnienia = myReader.GetString("uprawnienia");
+                    tab[0] = myReader.GetString("login");
+                    /*
+                    for (int i = 8, j = 1; j < 16; i++, j++)
+                    {
+                        tab[j] = myReader.GetString(i);
+                    }
+                    */
+                }
+                if (licz == 1)
+                {
+                    MessageBox.Show("username correct and password");
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            użytkownicy form2 = new użytkownicy();
+            this.Hide();
+            form2.Show();
+        }
     }
 }
