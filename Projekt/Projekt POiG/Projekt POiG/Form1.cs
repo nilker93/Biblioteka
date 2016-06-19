@@ -24,7 +24,7 @@ namespace Projekt_POiG
             try
             {
                 string constring = "SERVER=localhost;DATABASE=biblioteka;UID=root;password=";
-                string sUprawnienia = "";
+                bool sUprawnienia = false;
                 string[] tab = new string[16];
                 string Query = "select * from users WHERE haslo like'" + textBox2.Text + "' and login like '" + textBox1.Text + "' ;";
                 MySqlConnection myConn = new MySqlConnection(constring);
@@ -38,7 +38,8 @@ namespace Projekt_POiG
                 {
                     licz = licz + 1;
                     // sUprawnienia = myReader.GetString("uprawnienia");
-                    tab[0] = myReader.GetString("login");
+                    sUprawnienia = myReader.GetBoolean("uprawnienia");
+                    MessageBox.Show(tab[0]);
                     /*
                     for (int i = 8, j = 1; j < 16; i++, j++)
                     {
@@ -48,7 +49,18 @@ namespace Projekt_POiG
                 }
                 if (licz == 1)
                 {
-                    MessageBox.Show("username correct and password");
+                    if (sUprawnienia == true)
+                    {
+                        PanelAdministratora admin = new PanelAdministratora();
+                        this.Hide();
+                        admin.Show();
+                    }
+                    else
+                    {
+                        PanelUzytkownika user = new PanelUzytkownika();
+                        this.Hide();
+                        user.Show();
+                    }
 
                 }
 

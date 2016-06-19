@@ -19,3 +19,16 @@ D:\c#biblioteka\Biblioteka\Projekt\Biblioteka\Projekt\Projekt POiG\Projekt POiG\
 D:\c#biblioteka\Biblioteka\Projekt\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.rejestracja.resources
 D:\c#biblioteka\Biblioteka\Projekt\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.użytkownicy.resources
 D:\c#biblioteka\Biblioteka\Projekt\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\Projekt POiG.csproj.GenerateResource.Cache
+C:\Users\Alek\Desktop\c#\Biblioteka\Projekt\Projekt POiG\Projekt POiG\bin\Debug\Projekt POiG.exe.config
+C:\Users\Alek\Desktop\c#\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\Projekt POiG.exe
+C:\Users\Alek\Desktop\c#\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\Projekt POiG.pdb
+C:\Users\Alek\Desktop\c#\Biblioteka\Projekt\Projekt POiG\Projekt POiG\bin\Debug\Projekt POiG.exe
+C:\Users\Alek\Desktop\c#\Biblioteka\Projekt\Projekt POiG\Projekt POiG\bin\Debug\Projekt POiG.pdb
+C:\Users\Alek\Desktop\c#\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\Projekt POiG.csprojResolveAssemblyReference.cache
+C:\Users\Alek\Desktop\c#\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.Form1.resources
+C:\Users\Alek\Desktop\c#\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.PanelAdministratora.resources
+C:\Users\Alek\Desktop\c#\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.Properties.Resources.resources
+C:\Users\Alek\Desktop\c#\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.rejestracja.resources
+C:\Users\Alek\Desktop\c#\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.użytkownicy.resources
+C:\Users\Alek\Desktop\c#\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\Projekt POiG.csproj.GenerateResource.Cache
+C:\Users\Alek\Desktop\c#\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.DodajUzytkownika.resources
