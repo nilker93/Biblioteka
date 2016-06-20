@@ -22,13 +22,7 @@ namespace Projekt_POiG
 
             Uprawnienia.Items.Add("Administrator");
             Uprawnienia.Items.Add("Użytkownik");
-
-
-
-
-
         }
-
 
         DateTime data;
 

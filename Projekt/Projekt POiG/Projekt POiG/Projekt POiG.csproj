@@ -47,6 +47,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Book.cs" />
+    <Compile Include="DodajEdytujKsiazke.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DodajEdytujKsiazke.Designer.cs">
+      <DependentUpon>DodajEdytujKsiazke.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DodajKsiazke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DodajKsiazke.Designer.cs">
+      <DependentUpon>DodajKsiazke.cs</DependentUpon>
+    </Compile>
     <Compile Include="DodajUzytkownika.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +99,18 @@
     <Compile Include="użytkownicy.Designer.cs">
       <DependentUpon>użytkownicy.cs</DependentUpon>
     </Compile>
+    <Compile Include="Zarejestruj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Zarejestruj.Designer.cs">
+      <DependentUpon>Zarejestruj.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DodajEdytujKsiazke.resx">
+      <DependentUpon>DodajEdytujKsiazke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DodajKsiazke.resx">
+      <DependentUpon>DodajKsiazke.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DodajUzytkownika.resx">
       <DependentUpon>DodajUzytkownika.cs</DependentUpon>
     </EmbeddedResource>
@@ -95,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PanelAdministratora.resx">
       <DependentUpon>PanelAdministratora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelUzytkownika.resx">
+      <DependentUpon>PanelUzytkownika.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -111,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="użytkownicy.resx">
       <DependentUpon>użytkownicy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Zarejestruj.resx">
+      <DependentUpon>Zarejestruj.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

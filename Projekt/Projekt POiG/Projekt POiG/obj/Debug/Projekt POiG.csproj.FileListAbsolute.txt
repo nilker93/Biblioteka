@@ -32,3 +32,20 @@ C:\Users\Alek\Desktop\c#\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\
 C:\Users\Alek\Desktop\c#\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.użytkownicy.resources
 C:\Users\Alek\Desktop\c#\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\Projekt POiG.csproj.GenerateResource.Cache
 C:\Users\Alek\Desktop\c#\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.DodajUzytkownika.resources
+D:\Biblioteka\Projekt\Projekt POiG\Projekt POiG\bin\Debug\Projekt POiG.exe.config
+D:\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\Projekt POiG.exe
+D:\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\Projekt POiG.pdb
+D:\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\Projekt POiG.csprojResolveAssemblyReference.cache
+D:\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.DodajKsiazke.resources
+D:\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.DodajUzytkownika.resources
+D:\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.Form1.resources
+D:\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.PanelAdministratora.resources
+D:\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.PanelUzytkownika.resources
+D:\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.Properties.Resources.resources
+D:\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.rejestracja.resources
+D:\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.użytkownicy.resources
+D:\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\Projekt POiG.csproj.GenerateResource.Cache
+D:\Biblioteka\Projekt\Projekt POiG\Projekt POiG\bin\Debug\Projekt POiG.exe
+D:\Biblioteka\Projekt\Projekt POiG\Projekt POiG\bin\Debug\Projekt POiG.pdb
+D:\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.DodajEdytujKsiazke.resources
+D:\Biblioteka\Projekt\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.Zarejestruj.resources
