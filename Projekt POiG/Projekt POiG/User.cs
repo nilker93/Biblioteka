@@ -26,20 +26,15 @@ namespace Projekt_POiG
             {
                 conDataBase1.Open();
                 myReader1 = cmdDataBase1.ExecuteReader();
-
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-
             }
-
         }
 
-
         public int pobierzMaksymalneId(string constring, string Query)
-        {
-               
+        {  
                 int id1=0;
                 string id = "0";
                
@@ -54,27 +49,27 @@ namespace Projekt_POiG
                     {
                         id = myReader.GetString("idt");
                         
-                    }
-                   
+                    }  
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
-
                 }
-                
-                                        try
+                        try
                         {
                             id1 = Int32.Parse(id);
                         }
+
                         catch (FormatException er)
                         {
                             Console.WriteLine(er.Message);
                         }
+
                 if(id1 == 0)
                 {
                     id1=1;
                 }
+
                 else{
                     id1++;
                 }

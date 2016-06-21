@@ -218,6 +218,7 @@
             this.Controls.Add(this.textBox1);
             this.Name = "rejestracja";
             this.Size = new System.Drawing.Size(413, 408);
+            this.Load += new System.EventHandler(this.rejestracja_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

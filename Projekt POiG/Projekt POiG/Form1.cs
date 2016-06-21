@@ -47,6 +47,7 @@ namespace Projekt_POiG
                     }
                     */
                 }
+
                 if (licz == 1)
                 {
                     if (sUprawnienia == true)
@@ -65,16 +66,16 @@ namespace Projekt_POiG
                 }
 
             }
+
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
         }
-
+           
         private void button1_Click(object sender, EventArgs e)
         {
-            użytkownicy form2 = new użytkownicy();
+            Zarejestruj form2 = new Zarejestruj();
             this.Hide();
             form2.Show();
         }

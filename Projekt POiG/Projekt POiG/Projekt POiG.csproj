@@ -93,12 +93,6 @@
       <DependentUpon>rejestracja.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
-    <Compile Include="użytkownicy.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="użytkownicy.Designer.cs">
-      <DependentUpon>użytkownicy.cs</DependentUpon>
-    </Compile>
     <Compile Include="Zarejestruj.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,9 +129,6 @@
     </Compile>
     <EmbeddedResource Include="rejestracja.resx">
       <DependentUpon>rejestracja.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="użytkownicy.resx">
-      <DependentUpon>użytkownicy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Zarejestruj.resx">
       <DependentUpon>Zarejestruj.cs</DependentUpon>
