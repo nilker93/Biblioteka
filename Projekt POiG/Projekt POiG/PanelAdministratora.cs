@@ -95,5 +95,12 @@ namespace Projekt_POiG
             }
            
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            DodajKsiazke add = new DodajKsiazke();
+            this.Hide();
+            add.Show();
+        }
     }
 }

@@ -34,15 +34,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.IloscEgzemplarzy = new System.Windows.Forms.TextBox();
+            this.IloscStron = new System.Windows.Forms.TextBox();
+            this.Wydawnictwo = new System.Windows.Forms.TextBox();
+            this.DataWydania = new System.Windows.Forms.TextBox();
+            this.Tytul = new System.Windows.Forms.TextBox();
+            this.Autor = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label6
@@ -50,9 +48,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(28, 237);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(109, 17);
+            this.label6.Size = new System.Drawing.Size(120, 17);
             this.label6.TabIndex = 32;
-            this.label6.Text = "Ilość egzęplarzy";
+            this.label6.Text = "Ilość egzemplarzy";
             // 
             // label5
             // 
@@ -99,72 +97,57 @@
             this.label1.TabIndex = 27;
             this.label1.Text = "Autor";
             // 
-            // textBox6
+            // IloscEgzemplarzy
             // 
-            this.textBox6.Location = new System.Drawing.Point(173, 237);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(218, 22);
-            this.textBox6.TabIndex = 23;
+            this.IloscEgzemplarzy.Location = new System.Drawing.Point(173, 237);
+            this.IloscEgzemplarzy.Name = "IloscEgzemplarzy";
+            this.IloscEgzemplarzy.Size = new System.Drawing.Size(218, 22);
+            this.IloscEgzemplarzy.TabIndex = 23;
             // 
-            // textBox5
+            // IloscStron
             // 
-            this.textBox5.Location = new System.Drawing.Point(173, 194);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(218, 22);
-            this.textBox5.TabIndex = 22;
+            this.IloscStron.Location = new System.Drawing.Point(173, 194);
+            this.IloscStron.Name = "IloscStron";
+            this.IloscStron.Size = new System.Drawing.Size(218, 22);
+            this.IloscStron.TabIndex = 22;
             // 
-            // textBox4
+            // Wydawnictwo
             // 
-            this.textBox4.Location = new System.Drawing.Point(173, 150);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(218, 22);
-            this.textBox4.TabIndex = 21;
+            this.Wydawnictwo.Location = new System.Drawing.Point(173, 150);
+            this.Wydawnictwo.Name = "Wydawnictwo";
+            this.Wydawnictwo.Size = new System.Drawing.Size(218, 22);
+            this.Wydawnictwo.TabIndex = 21;
             // 
-            // textBox3
+            // DataWydania
             // 
-            this.textBox3.Location = new System.Drawing.Point(173, 108);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(218, 22);
-            this.textBox3.TabIndex = 20;
+            this.DataWydania.Location = new System.Drawing.Point(173, 108);
+            this.DataWydania.Name = "DataWydania";
+            this.DataWydania.Size = new System.Drawing.Size(218, 22);
+            this.DataWydania.TabIndex = 20;
             // 
-            // textBox2
+            // Tytul
             // 
-            this.textBox2.Location = new System.Drawing.Point(173, 67);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(218, 22);
-            this.textBox2.TabIndex = 19;
+            this.Tytul.Location = new System.Drawing.Point(173, 67);
+            this.Tytul.Name = "Tytul";
+            this.Tytul.Size = new System.Drawing.Size(218, 22);
+            this.Tytul.TabIndex = 19;
             // 
-            // textBox1
+            // Autor
             // 
-            this.textBox1.Location = new System.Drawing.Point(173, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(218, 22);
-            this.textBox1.TabIndex = 18;
+            this.Autor.Location = new System.Drawing.Point(173, 25);
+            this.Autor.Name = "Autor";
+            this.Autor.Size = new System.Drawing.Size(218, 22);
+            this.Autor.TabIndex = 18;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(268, 333);
+            this.button1.Location = new System.Drawing.Point(268, 290);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(123, 47);
             this.button1.TabIndex = 36;
             this.button1.Text = "Dodaj";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(173, 279);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(218, 22);
-            this.textBox7.TabIndex = 24;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(28, 279);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(62, 17);
-            this.label7.TabIndex = 33;
-            this.label7.Text = "Gatunek";
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // DodajKsiazke
             // 
@@ -172,20 +155,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(444, 437);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.IloscEgzemplarzy);
+            this.Controls.Add(this.IloscStron);
+            this.Controls.Add(this.Wydawnictwo);
+            this.Controls.Add(this.DataWydania);
+            this.Controls.Add(this.Tytul);
+            this.Controls.Add(this.Autor);
             this.Name = "DodajKsiazke";
             this.Text = "DodajKsiazke";
             this.Load += new System.EventHandler(this.DodajKsiazke_Load);
@@ -202,14 +183,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox IloscEgzemplarzy;
+        private System.Windows.Forms.TextBox IloscStron;
+        private System.Windows.Forms.TextBox Wydawnictwo;
+        private System.Windows.Forms.TextBox DataWydania;
+        private System.Windows.Forms.TextBox Tytul;
+        private System.Windows.Forms.TextBox Autor;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label7;
     }
 }
