@@ -64,3 +64,6 @@ D:\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt POiG.csproj.GenerateRe
 D:\Biblioteka\Projekt POiG\Projekt POiG\bin\Debug\Projekt POiG.exe
 D:\Biblioteka\Projekt POiG\Projekt POiG\bin\Debug\Projekt POiG.pdb
 D:\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt POiG.pdb
+C:\Users\Alek\Desktop\c#\Biblioteka\Projekt POiG\Projekt POiG\bin\Debug\Projekt POiG.exe.config
+C:\Users\Alek\Desktop\c#\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt POiG.exe
+C:\Users\Alek\Desktop\c#\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt POiG.pdb

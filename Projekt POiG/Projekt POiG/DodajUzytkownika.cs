@@ -32,11 +32,11 @@ namespace Projekt_POiG
         private void button1_Click(object sender, EventArgs e)
         {
             //////////
-            string Query = "select ido from users WHERE idt=(SELECT max(idt) FROM users);";
-            string constring = "SERVER=localhost;DATABASE=biblioteka;UID=root;password=";
+            string Query = "select idt from table1 WHERE idt=(SELECT max(idt) FROM table1);";
+            string constring = "SERVER=localhost;DATABASE=quizdatabase;UID=root;password=";
             User myClass = new User();
             UserMaxId = myClass.pobierzMaksymalneId(constring, Query);
-            if(Uprawnienia.SelectedText == "Administrator")
+            if (Uprawnienia.SelectedText == "Administrator")
             {
                 uprawnienie = 1;
             }
@@ -45,20 +45,20 @@ namespace Projekt_POiG
                 uprawnienie = 0;
 
             }
-            myClass.dodajUzytkownika(UserMaxId, Imie.Text, Nazwisko.Text, Login.Text, Haslo.Text, uprawnienie, dateTimePicker1.Value.Date,Miasto.Text,Adres.Text,Pesel.Text);
+            UserMaxId++;
+            myClass.dodajUzytkownika(UserMaxId, Imie.Text, Nazwisko.Text, Login.Text, Haslo.Text, uprawnienie, dateTimePicker1.Value.Date, Miasto.Text, Adres.Text, Pesel.Text);
             //data = dateTimePicker1.Value.Date;
-            //int i;
+            int i;
+            PanelAdministratora add = new PanelAdministratora();
+            this.Hide();
+            add.Show();
+
         }
 
         private void label10_Click(object sender, EventArgs e)
         {
 
         }
-
-        private void DodajUzytkownika_Load(object sender, EventArgs e)
-        {
-
-        }
     }
-    }
+}
 
