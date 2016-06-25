@@ -273,7 +273,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DodajUzytkownika";
             this.Text = "DodajUzytkownika";
-            this.Load += new System.EventHandler(this.DodajUzytkownika_Load);
+            //this.Load += new System.EventHandler(this.DodajUzytkownika_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

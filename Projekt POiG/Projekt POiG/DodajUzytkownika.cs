@@ -32,8 +32,9 @@ namespace Projekt_POiG
         private void button1_Click(object sender, EventArgs e)
         {
             //////////
-            string Query = "select idt from table1 WHERE idt=(SELECT max(idt) FROM table1);";
-            string constring = "SERVER=localhost;DATABASE=quizdatabase;UID=root;password=";
+      
+            string Query = "select ido from users WHERE ido=(SELECT max(ido) FROM users);";
+            string constring = "SERVER=localhost;DATABASE=biblioteka;UID=root;password=";
             User myClass = new User();
             UserMaxId = myClass.pobierzMaksymalneId(constring, Query);
             if (Uprawnienia.SelectedText == "Administrator")
@@ -45,7 +46,6 @@ namespace Projekt_POiG
                 uprawnienie = 0;
 
             }
-            UserMaxId++;
             myClass.dodajUzytkownika(UserMaxId, Imie.Text, Nazwisko.Text, Login.Text, Haslo.Text, uprawnienie, dateTimePicker1.Value.Date, Miasto.Text, Adres.Text, Pesel.Text);
             //data = dateTimePicker1.Value.Date;
             int i;

@@ -89,7 +89,7 @@ namespace Projekt_POiG
                     myReader = cmdDataBase.ExecuteReader();
                     while (myReader.Read())
                     {
-                        id = myReader.GetString("idt");
+                        id = myReader.GetString("ido");
                         
                     }  
                 }

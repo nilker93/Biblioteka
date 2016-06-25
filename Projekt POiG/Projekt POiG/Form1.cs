@@ -39,7 +39,7 @@ namespace Projekt_POiG
                     licz = licz + 1;
                     // sUprawnienia = myReader.GetString("uprawnienia");
                     sUprawnienia = myReader.GetBoolean("uprawnienia");
-                    MessageBox.Show(tab[0]);
+                    //MessageBox.Show(tab[0]);
                     /*
                     for (int i = 8, j = 1; j < 16; i++, j++)
                     {
