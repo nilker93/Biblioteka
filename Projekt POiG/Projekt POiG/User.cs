@@ -14,12 +14,48 @@ namespace Projekt_POiG
 {
     class User
     {
-        string[] tablicaloginow = new string[100];
+        public string[] tableoflogin = new string[100];
+
+        public User(string[] names)
+        {
+            this.tableoflogin = names;
+        }
+        public User()
+        {
+            
+        }
+
+        public void usunuzytkownika(string login)
+        {
+           
+            string constring = "SERVER=localhost;DATABASE=biblioteka;UID=root;password=";
+            string Query1 = "delete from users where login like '" + login + "' ;";
+           
+            MySqlConnection conDataBase1 = new MySqlConnection(constring);
+            MySqlCommand cmdDataBase1 = new MySqlCommand(Query1, conDataBase1);
+            MySqlDataReader myReader1;
+            try
+            {
+                conDataBase1.Open();
+                myReader1 = cmdDataBase1.ExecuteReader();
+               
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+            
+
+        }
+
 
 
         public string[] zapelnijcombobox()
         {
             string[] names = new string[100];
+            string[] tablicaloginow = new string[100];
             string imie = "";
             string nazwisko = "";
             string login = "";
@@ -39,7 +75,7 @@ namespace Projekt_POiG
                     nazwisko = myReader1.GetString("nazwisko");
                     login = myReader1.GetString("login");
                     names[i] = imie + " " + nazwisko + ":" + login;
-                    this.tablicaloginow[i] = login;
+                    tablicaloginow[i] = login;
                     i++;
                 }
 
@@ -49,8 +85,9 @@ namespace Projekt_POiG
                 MessageBox.Show(ex.Message);
 
             }
+            
 
-
+            
             return names;
         }
 

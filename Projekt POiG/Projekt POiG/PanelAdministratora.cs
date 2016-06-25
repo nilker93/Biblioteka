@@ -17,15 +17,22 @@ namespace Projekt_POiG
             InitializeComponent();
             fill_comboBox1();
         }
+        string[] names = new string[100];
+        
         void fill_comboBox1()
         {
+            comboBox1.Items.Clear();
+            comboBox2.Items.Clear();
             int licznik = 0;
-            string[] names = new string[100];
+            
             User myClass = new User();
+           
             names = myClass.zapelnijcombobox();
+            
             while (names[licznik] != null)
             {
                 comboBox1.Items.Add(names[licznik]);
+                comboBox2.Items.Add(names[licznik]);
                 licznik++;
 
             }
@@ -52,6 +59,41 @@ namespace Projekt_POiG
             this.Hide();
             add.Show();
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int id = 0;
+            id = comboBox2.SelectedIndex;
+            if (id == -1)
+            {
+                MessageBox.Show("Proszę wybrać wpierw użytkownika którego chcesz usunąć!");
+            }
+            else
+            {
+                
+                
+                int index = names[id].IndexOf(":");
+                string poszukiwanystring = names[id];
+                string login = "";
+                int i = 0;
+                index++;
+                foreach(char s in poszukiwanystring)
+                {
+                    if (i >= index)
+                    {
+                        login += poszukiwanystring[i];
+                    }
+                    i++;
+
+                }
+                User myClass = new User();
+
+                myClass.usunuzytkownika(login);
+                fill_comboBox1();
+
+            }
+           
         }
     }
 }
