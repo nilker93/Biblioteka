@@ -102,5 +102,37 @@ namespace Projekt_POiG
             this.Hide();
             add.Show();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            int id = 0;
+            id = comboBox3.SelectedIndex;
+            if (id == -1)
+            {
+                MessageBox.Show("Proszę wybrać wpierw książkę którego chcesz usunąć!");
+            }
+            else
+            {
+                int index = names[id].IndexOf(":");
+                string poszukiwanystring = names[id];
+                string login = "";
+                int i = 0;
+                index++;
+                foreach (char s in poszukiwanystring)
+                {
+                    if (i >= index)
+                    {
+                        login += poszukiwanystring[i];
+                    }
+                    i++;
+
+                }
+                Book myClass = new Book();
+
+                myClass.usunKsiazke(login);
+                fill_comboBox1();
+
+            }
+        }
     }
 }

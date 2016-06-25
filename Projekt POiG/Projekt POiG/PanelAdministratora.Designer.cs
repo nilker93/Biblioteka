@@ -54,7 +54,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(619, 50);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(179, 36);
             this.button1.TabIndex = 0;
@@ -65,7 +65,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(619, 110);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(179, 36);
             this.button2.TabIndex = 1;
@@ -76,7 +76,7 @@
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(619, 203);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(179, 36);
             this.button3.TabIndex = 2;
@@ -190,17 +190,18 @@
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(821, 203);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(179, 36);
             this.button5.TabIndex = 18;
             this.button5.Text = "Usuń Książkę";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
             this.button6.Location = new System.Drawing.Point(821, 110);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(179, 36);
             this.button6.TabIndex = 17;
@@ -210,7 +211,7 @@
             // button7
             // 
             this.button7.Location = new System.Drawing.Point(821, 50);
-            this.button7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button7.Margin = new System.Windows.Forms.Padding(4);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(179, 36);
             this.button7.TabIndex = 16;
@@ -283,7 +284,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PanelAdministratora";
             this.Text = "PanelAdministratora";
             this.ResumeLayout(false);

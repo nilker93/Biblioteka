@@ -14,6 +14,58 @@ namespace Projekt_POiG
 {
     class Book
     {
+        public void usunKsiazke(string tytul)
+        {
+            string constring = "SERVER=localhost;DATABASE=biblioteka;UID=root;password=";
+            //string Query1 = "delete from books where tytul like '" + tutul + "' ;";
+
+            MySqlConnection conDataBase1 = new MySqlConnection(constring);
+            //MySqlCommand cmdDataBase1 = new MySqlCommand(Query1, conDataBase1);
+            MySqlDataReader myReader1;
+            try
+            {
+                conDataBase1.Open();
+                //myReader1 = cmdDataBase1.ExecuteReader();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public string[] zapelnijcombobox()
+        {
+            string[] names = new string[100];
+            string[] tablicaloginow = new string[100];
+            string autor = "";
+            string tytul = "";
+            string constring = "SERVER=localhost;DATABASE=biblioteka;UID=root;password=";
+            string Query1 = "select * from books ;";
+            int i = 0;
+            MySqlConnection conDataBase1 = new MySqlConnection(constring);
+            MySqlCommand cmdDataBase1 = new MySqlCommand(Query1, conDataBase1);
+            MySqlDataReader myReader1;
+            try
+            {
+                conDataBase1.Open();
+                myReader1 = cmdDataBase1.ExecuteReader();
+                while (myReader1.Read())
+                {
+                    autor = myReader1.GetString("autor");
+                    tytul = myReader1.GetString("tytul");
+                    names[i] = autor + ":" + tytul;
+                    tablicaloginow[i] = tytul;
+                    i++;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return names;
+        }
+
         public void dodajKsiazke(int id, string autor, string tytul, string dataWydania, string Wydawnictwo, string iloscStron, string iloscEgzemblarzy)
         {
             string constring = "SERVER=localhost;DATABASE=biblioteka;UID=root;password=";
