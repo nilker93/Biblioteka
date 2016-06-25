@@ -225,7 +225,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(547, 486);
+            this.ClientSize = new System.Drawing.Size(495, 384);
             this.Controls.Add(this.Pesel);
             this.Controls.Add(this.Adres);
             this.Controls.Add(this.Miasto);

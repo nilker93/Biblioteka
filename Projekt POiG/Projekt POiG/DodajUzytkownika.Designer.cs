@@ -53,7 +53,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(342, 389);
+            this.button1.Location = new System.Drawing.Point(359, 340);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 28);
@@ -65,7 +65,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 16);
+            this.label1.Location = new System.Drawing.Point(25, 25);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(33, 17);
@@ -74,7 +74,7 @@
             // 
             // Imie
             // 
-            this.Imie.Location = new System.Drawing.Point(192, 15);
+            this.Imie.Location = new System.Drawing.Point(194, 25);
             this.Imie.Margin = new System.Windows.Forms.Padding(4);
             this.Imie.Name = "Imie";
             this.Imie.Size = new System.Drawing.Size(265, 22);
@@ -83,7 +83,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 54);
+            this.label2.Location = new System.Drawing.Point(25, 55);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 17);
@@ -93,7 +93,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 81);
+            this.label3.Location = new System.Drawing.Point(25, 85);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 17);
@@ -103,7 +103,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 112);
+            this.label4.Location = new System.Drawing.Point(25, 115);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 17);
@@ -113,7 +113,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 150);
+            this.label5.Location = new System.Drawing.Point(25, 145);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(96, 17);
@@ -122,7 +122,7 @@
             // 
             // Nazwisko
             // 
-            this.Nazwisko.Location = new System.Drawing.Point(192, 50);
+            this.Nazwisko.Location = new System.Drawing.Point(194, 55);
             this.Nazwisko.Margin = new System.Windows.Forms.Padding(4);
             this.Nazwisko.Name = "Nazwisko";
             this.Nazwisko.Size = new System.Drawing.Size(265, 22);
@@ -130,7 +130,7 @@
             // 
             // Login
             // 
-            this.Login.Location = new System.Drawing.Point(192, 82);
+            this.Login.Location = new System.Drawing.Point(194, 85);
             this.Login.Margin = new System.Windows.Forms.Padding(4);
             this.Login.Name = "Login";
             this.Login.Size = new System.Drawing.Size(265, 22);
@@ -138,15 +138,15 @@
             // 
             // Haslo
             // 
-            this.Haslo.Location = new System.Drawing.Point(192, 114);
+            this.Haslo.Location = new System.Drawing.Point(194, 115);
             this.Haslo.Margin = new System.Windows.Forms.Padding(4);
             this.Haslo.Name = "Haslo";
-            this.Haslo.Size = new System.Drawing.Size(269, 22);
+            this.Haslo.Size = new System.Drawing.Size(265, 22);
             this.Haslo.TabIndex = 9;
             // 
             // Powtorzhaslo
             // 
-            this.Powtorzhaslo.Location = new System.Drawing.Point(192, 146);
+            this.Powtorzhaslo.Location = new System.Drawing.Point(194, 145);
             this.Powtorzhaslo.Margin = new System.Windows.Forms.Padding(4);
             this.Powtorzhaslo.Name = "Powtorzhaslo";
             this.Powtorzhaslo.Size = new System.Drawing.Size(265, 22);
@@ -155,7 +155,7 @@
             // Uprawnienia
             // 
             this.Uprawnienia.FormattingEnabled = true;
-            this.Uprawnienia.Location = new System.Drawing.Point(19, 389);
+            this.Uprawnienia.Location = new System.Drawing.Point(194, 266);
             this.Uprawnienia.Margin = new System.Windows.Forms.Padding(4);
             this.Uprawnienia.Name = "Uprawnienia";
             this.Uprawnienia.Size = new System.Drawing.Size(265, 24);
@@ -164,7 +164,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(33, 305);
+            this.label6.Location = new System.Drawing.Point(25, 266);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(86, 17);
@@ -173,7 +173,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(192, 331);
+            this.dateTimePicker1.Location = new System.Drawing.Point(194, 298);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(265, 22);
@@ -182,7 +182,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(16, 338);
+            this.label7.Location = new System.Drawing.Point(25, 298);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(105, 17);
@@ -192,7 +192,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(23, 194);
+            this.label8.Location = new System.Drawing.Point(25, 175);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(49, 17);
@@ -202,7 +202,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(23, 234);
+            this.label9.Location = new System.Drawing.Point(25, 206);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(45, 17);
@@ -212,7 +212,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(23, 270);
+            this.label10.Location = new System.Drawing.Point(25, 236);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(43, 17);
@@ -222,7 +222,7 @@
             // 
             // Miasto
             // 
-            this.Miasto.Location = new System.Drawing.Point(192, 191);
+            this.Miasto.Location = new System.Drawing.Point(194, 175);
             this.Miasto.Margin = new System.Windows.Forms.Padding(4);
             this.Miasto.Name = "Miasto";
             this.Miasto.Size = new System.Drawing.Size(265, 22);
@@ -230,7 +230,7 @@
             // 
             // Adres
             // 
-            this.Adres.Location = new System.Drawing.Point(192, 229);
+            this.Adres.Location = new System.Drawing.Point(194, 206);
             this.Adres.Margin = new System.Windows.Forms.Padding(4);
             this.Adres.Name = "Adres";
             this.Adres.Size = new System.Drawing.Size(265, 22);
@@ -238,7 +238,7 @@
             // 
             // Pesel
             // 
-            this.Pesel.Location = new System.Drawing.Point(192, 261);
+            this.Pesel.Location = new System.Drawing.Point(194, 236);
             this.Pesel.Margin = new System.Windows.Forms.Padding(4);
             this.Pesel.Name = "Pesel";
             this.Pesel.Size = new System.Drawing.Size(265, 22);
@@ -248,7 +248,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(479, 442);
+            this.ClientSize = new System.Drawing.Size(494, 403);
             this.Controls.Add(this.Pesel);
             this.Controls.Add(this.Adres);
             this.Controls.Add(this.Miasto);
@@ -273,7 +273,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DodajUzytkownika";
             this.Text = "DodajUzytkownika";
-            //this.Load += new System.EventHandler(this.DodajUzytkownika_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

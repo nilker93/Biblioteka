@@ -134,5 +134,10 @@ namespace Projekt_POiG
 
             }
         }
+
+        private void PanelAdministratora_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

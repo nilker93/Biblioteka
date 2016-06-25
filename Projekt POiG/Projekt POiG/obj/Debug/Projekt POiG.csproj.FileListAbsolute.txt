@@ -71,14 +71,12 @@ D:\Biblioteka\Biblioteka\Projekt POiG\Projekt POiG\bin\Debug\Projekt POiG.exe.co
 D:\Biblioteka\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt POiG.exe
 D:\Biblioteka\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt POiG.pdb
 D:\Biblioteka\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt POiG.csprojResolveAssemblyReference.cache
-D:\Biblioteka\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.DodajEdytujKsiazke.resources
 D:\Biblioteka\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.DodajKsiazke.resources
 D:\Biblioteka\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.DodajUzytkownika.resources
 D:\Biblioteka\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.Form1.resources
 D:\Biblioteka\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.PanelAdministratora.resources
 D:\Biblioteka\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.PanelUzytkownika.resources
 D:\Biblioteka\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.Properties.Resources.resources
-D:\Biblioteka\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.rejestracja.resources
 D:\Biblioteka\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.Zarejestruj.resources
 D:\Biblioteka\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt POiG.csproj.GenerateResource.Cache
 D:\Biblioteka\Biblioteka\Projekt POiG\Projekt POiG\bin\Debug\Projekt POiG.exe
