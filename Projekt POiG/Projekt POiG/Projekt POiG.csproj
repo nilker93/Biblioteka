@@ -99,6 +99,9 @@
     <EmbeddedResource Include="DodajUzytkownika.resx">
       <DependentUpon>DodajUzytkownika.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Edytuj ksiazke.resx">
+      <DependentUpon>Edytuj ksiazke.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
