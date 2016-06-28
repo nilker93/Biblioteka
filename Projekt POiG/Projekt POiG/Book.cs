@@ -61,9 +61,13 @@ namespace Projekt_POiG
                     iloscStron = myReader1.GetString("iloscStron");
                     iloscEgzemblarzy = myReader1.GetString("iloscEgzemblarzy");
                     wydawnictwo = myReader1.GetString("Wydawnictwo");
-                    names[i] = "Autor:" + autor + " \nTytuł:" + tytul1 + " \nData Wydania:" + DataWydania + " \nIlość stron:" + iloscStron + " \nIlość Egzemblarzy:" + iloscEgzemblarzy + " \nWydawnictwo:" + wydawnictwo;
-                    
-                    i++;
+                    names[0] = "Autor:" + autor;    
+                    names[1] = " Tytuł:" + tytul1;
+                    names[2] = " Data Wydania:" + DataWydania;
+                    names[3] = " Ilość stron:" + iloscStron;
+                    names[4] = " \nIlość Egzemblarzy:" + iloscEgzemblarzy;
+                    names[5] = " Wydawnictwo:" + wydawnictwo;
+                   
                 }
 
             }

@@ -49,7 +49,9 @@ namespace Projekt_POiG
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            listBox2.Items.Clear();
             int id = 0;
+
             id = listBox1.SelectedIndex;
             int index = ksiazkidolisty[id].IndexOf(":");
             string poszukiwanystring = ksiazkidolisty[id];
@@ -67,7 +69,11 @@ namespace Projekt_POiG
             }
             Book b1 = new Book();
             info = b1.zapelnijlistbox(tytul);
-            listBox2.Items.Add(info[0]);
+            for (i = 0; i <= 5; i++)
+            {
+                listBox2.Items.Add(info[i]);
+            }
+
         }
     }
 }
