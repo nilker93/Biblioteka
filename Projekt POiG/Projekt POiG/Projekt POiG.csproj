@@ -59,11 +59,11 @@
     <Compile Include="DodajUzytkownika.Designer.cs">
       <DependentUpon>DodajUzytkownika.cs</DependentUpon>
     </Compile>
-    <Compile Include="Edytuj ksiazke.cs">
+    <Compile Include="EdytujKsiazke.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Edytuj ksiazke.Designer.cs">
-      <DependentUpon>Edytuj ksiazke.cs</DependentUpon>
+    <Compile Include="EdytujKsiazke.Designer.cs">
+      <DependentUpon>EdytujKsiazke.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -99,8 +99,8 @@
     <EmbeddedResource Include="DodajUzytkownika.resx">
       <DependentUpon>DodajUzytkownika.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Edytuj ksiazke.resx">
-      <DependentUpon>Edytuj ksiazke.cs</DependentUpon>
+    <EmbeddedResource Include="EdytujKsiazke.resx">
+      <DependentUpon>EdytujKsiazke.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

@@ -66,6 +66,25 @@ namespace Projekt_POiG
             return names;
         }
 
+        public void edytujKsiazke(string autor, string tytul, string dataWydania, string Wydawnictwo, string iloscStron, string iloscEgzemblarzy)
+        {
+            string constring = "SERVER=localhost;DATABASE=biblioteka;UID=root;password=";
+            string Query1 = "insert into books values (" + autor + "','" + tytul + "','" + dataWydania + "','" + Wydawnictwo + "','" + iloscStron + "','" + iloscEgzemblarzy + "');";
+
+            MySqlConnection conDataBase1 = new MySqlConnection(constring);
+            MySqlCommand cmdDataBase1 = new MySqlCommand(Query1, conDataBase1);
+            MySqlDataReader myReader1;
+            try
+            {
+                conDataBase1.Open();
+                myReader1 = cmdDataBase1.ExecuteReader();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         public void dodajKsiazke(int id, string autor, string tytul, string dataWydania, string Wydawnictwo, string iloscStron, string iloscEgzemblarzy)
         {
             string constring = "SERVER=localhost;DATABASE=biblioteka;UID=root;password=";
