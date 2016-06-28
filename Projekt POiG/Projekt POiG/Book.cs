@@ -17,15 +17,15 @@ namespace Projekt_POiG
         public void usunKsiazke(string tytul)
         {
             string constring = "SERVER=localhost;DATABASE=biblioteka;UID=root;password=";
-            //string Query1 = "delete from books where tytul like '" + tutul + "' ;";
+            string Query1 = "delete from books where tytul like '" + tytul + "' ;";
 
             MySqlConnection conDataBase1 = new MySqlConnection(constring);
-            //MySqlCommand cmdDataBase1 = new MySqlCommand(Query1, conDataBase1);
+            MySqlCommand cmdDataBase1 = new MySqlCommand(Query1, conDataBase1);
             MySqlDataReader myReader1;
             try
             {
                 conDataBase1.Open();
-                //myReader1 = cmdDataBase1.ExecuteReader();
+                myReader1 = cmdDataBase1.ExecuteReader();
             }
             catch (Exception ex)
             {
@@ -33,9 +33,9 @@ namespace Projekt_POiG
             }
         }
 
-        public string[] zapelnijcombobox2()
+        public string[] zapelnijcombobox()
         {
-            string[] title = new string[100];
+            string[] names = new string[100];
             string[] tablicaloginow = new string[100];
             string autor = "";
             string tytul = "";
@@ -53,7 +53,7 @@ namespace Projekt_POiG
                 {
                     autor = myReader1.GetString("autor");
                     tytul = myReader1.GetString("tytul");
-                    title[i] = autor + ":" + tytul;
+                    names[i] = autor + ":" + tytul;
                     tablicaloginow[i] = tytul;
                     i++;
                 }
@@ -63,7 +63,7 @@ namespace Projekt_POiG
             {
                 MessageBox.Show(ex.Message);
             }
-            return title;
+            return names;
         }
 
         public void edytujKsiazke(string autor, string tytul, string dataWydania, string Wydawnictwo, string iloscStron, string iloscEgzemblarzy)

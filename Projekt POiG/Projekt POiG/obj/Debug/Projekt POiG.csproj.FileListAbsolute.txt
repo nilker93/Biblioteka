@@ -83,15 +83,30 @@ D:\Biblioteka\Biblioteka\Projekt POiG\Projekt POiG\bin\Debug\Projekt POiG.pdb
 C:\Users\Alek\Desktop\c#\Biblioteka\Projekt POiG\Projekt POiG\bin\Debug\Projekt POiG.exe
 C:\Users\Alek\Desktop\c#\Biblioteka\Projekt POiG\Projekt POiG\bin\Debug\Projekt POiG.pdb
 C:\Users\Alek\Desktop\c#\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt POiG.csprojResolveAssemblyReference.cache
-C:\Users\Alek\Desktop\c#\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.DodajEdytujKsiazke.resources
 C:\Users\Alek\Desktop\c#\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.DodajKsiazke.resources
 C:\Users\Alek\Desktop\c#\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.DodajUzytkownika.resources
 C:\Users\Alek\Desktop\c#\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.Form1.resources
 C:\Users\Alek\Desktop\c#\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.PanelAdministratora.resources
 C:\Users\Alek\Desktop\c#\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.PanelUzytkownika.resources
 C:\Users\Alek\Desktop\c#\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.Properties.Resources.resources
-C:\Users\Alek\Desktop\c#\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.rejestracja.resources
 C:\Users\Alek\Desktop\c#\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.Zarejestruj.resources
 C:\Users\Alek\Desktop\c#\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt POiG.csproj.GenerateResource.Cache
-D:\Biblioteka\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt POiG.csprojResolveAssemblyReference.cache
-D:\Biblioteka\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.EdytujKsiazke.resources
+D:\Biblioteka\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.Edytuj_ksiazke.resources
+C:\Users\Alek\Desktop\c#\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.Edytuj_ksiazke.resources
+C:\Users\Alek\Desktop\c#\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.EdytujUżytkownika.resources
+C:\Users\Adam\Desktop\fdf\Biblioteka\Projekt POiG\Projekt POiG\bin\Debug\Projekt POiG.exe.config
+C:\Users\Adam\Desktop\fdf\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt POiG.exe
+C:\Users\Adam\Desktop\fdf\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt POiG.pdb
+C:\Users\Adam\Desktop\fdf\Biblioteka\Projekt POiG\Projekt POiG\bin\Debug\Projekt POiG.exe
+C:\Users\Adam\Desktop\fdf\Biblioteka\Projekt POiG\Projekt POiG\bin\Debug\Projekt POiG.pdb
+C:\Users\Adam\Desktop\fdf\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt POiG.csprojResolveAssemblyReference.cache
+C:\Users\Adam\Desktop\fdf\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.DodajKsiazke.resources
+C:\Users\Adam\Desktop\fdf\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.DodajUzytkownika.resources
+C:\Users\Adam\Desktop\fdf\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.Edytuj_ksiazke.resources
+C:\Users\Adam\Desktop\fdf\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.EdytujUżytkownika.resources
+C:\Users\Adam\Desktop\fdf\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.Form1.resources
+C:\Users\Adam\Desktop\fdf\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.PanelAdministratora.resources
+C:\Users\Adam\Desktop\fdf\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.PanelUzytkownika.resources
+C:\Users\Adam\Desktop\fdf\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.Properties.Resources.resources
+C:\Users\Adam\Desktop\fdf\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.Zarejestruj.resources
+C:\Users\Adam\Desktop\fdf\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt POiG.csproj.GenerateResource.Cache

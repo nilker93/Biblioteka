@@ -32,6 +32,17 @@ namespace Projekt_POiG
             string constring = "SERVER=localhost;DATABASE=biblioteka;UID=root;password=";
             Book myClass = new Book();
             BookMaxId = myClass.pobierzMaksymalneId(constring, Query);
+            /*
+            if (Uprawnienia.SelectedText == "Administrator")
+            {
+                uprawnienie = 1;
+            }
+            else
+            {
+                uprawnienie = 0;
+
+            }
+            */
             myClass.dodajKsiazke(BookMaxId, Autor.Text, Tytul.Text, DataWydania.Text, Wydawnictwo.Text, IloscStron.Text, IloscEgzemplarzy.Text);
             //data = dateTimePicker1.Value.Date;
             int i;
