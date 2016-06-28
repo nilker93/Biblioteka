@@ -183,5 +183,38 @@ namespace Projekt_POiG
         {
 
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            int id = 0;
+            id = comboBox4.SelectedIndex;
+            if (id == -1)
+            {
+                MessageBox.Show("Proszę wybrać wpierw użytkownika którego chcesz usunąć!");
+            }
+            else
+            {
+
+
+                int index = ksiazki[id].IndexOf(":");
+                string poszukiwanystring = ksiazki[id];
+                string tytul = "";
+                int i = 0;
+                index++;
+                foreach (char s in poszukiwanystring)
+                {
+                    if (i >= index)
+                    {
+                        tytul += poszukiwanystring[i];
+                    }
+                    i++;
+
+                }
+                Edytuj_ksiazke add = new Edytuj_ksiazke();
+                add.przekaz(tytul);
+                this.Hide();
+                add.Show();
+            }
+        }
     }
 }

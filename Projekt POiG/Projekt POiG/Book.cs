@@ -33,6 +33,8 @@ namespace Projekt_POiG
             }
         }
 
+
+
         public string[] zapelnijcombobox()
         {
             string[] names = new string[100];
@@ -66,10 +68,14 @@ namespace Projekt_POiG
             return names;
         }
 
-        public void edytujKsiazke(string autor, string tytul, string dataWydania, string Wydawnictwo, string iloscStron, string iloscEgzemblarzy)
+        public void edytujKsiazke(string JakaKsiazkeZmienic, string autor, string tytul, string dataWydania, string Wydawnictwo, string iloscStron, string iloscEgzemblarzy)
         {
+        /*
             string constring = "SERVER=localhost;DATABASE=biblioteka;UID=root;password=";
             string Query1 = "insert into books values (" + autor + "','" + tytul + "','" + dataWydania + "','" + Wydawnictwo + "','" + iloscStron + "','" + iloscEgzemblarzy + "');";
+        */
+            string constring = "SERVER=localhost;DATABASE=biblioteka;UID=root;password=";
+            string Query1 = "update books set autor='" + autor + "', tytul='" + tytul + "',dataWydania='" + dataWydania + "', Wydawnictwo='" + Wydawnictwo + "', iloscStron='" + iloscStron + "',iloscEgzemblarzy='" + iloscEgzemblarzy + "' where tytul like '" + JakaKsiazkeZmienic + "' ;";
 
             MySqlConnection conDataBase1 = new MySqlConnection(constring);
             MySqlCommand cmdDataBase1 = new MySqlCommand(Query1, conDataBase1);

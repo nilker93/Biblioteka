@@ -110,3 +110,5 @@ C:\Users\Adam\Desktop\fdf\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt
 C:\Users\Adam\Desktop\fdf\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.Properties.Resources.resources
 C:\Users\Adam\Desktop\fdf\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.Zarejestruj.resources
 C:\Users\Adam\Desktop\fdf\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt POiG.csproj.GenerateResource.Cache
+D:\Biblioteka\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt POiG.csprojResolveAssemblyReference.cache
+D:\Biblioteka\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.EdytujUżytkownika.resources

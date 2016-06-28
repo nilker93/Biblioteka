@@ -38,8 +38,6 @@ namespace Projekt_POiG
             {
                 conDataBase1.Open();
                 myReader1 = cmdDataBase1.ExecuteReader();
-
-
             }
             catch (Exception ex)
             {

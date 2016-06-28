@@ -207,6 +207,7 @@
             this.button6.TabIndex = 17;
             this.button6.Text = "Edytuj Książkę";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
