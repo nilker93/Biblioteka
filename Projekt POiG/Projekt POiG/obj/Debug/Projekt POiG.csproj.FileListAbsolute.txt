@@ -93,4 +93,5 @@ C:\Users\Alek\Desktop\c#\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt_
 C:\Users\Alek\Desktop\c#\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.rejestracja.resources
 C:\Users\Alek\Desktop\c#\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.Zarejestruj.resources
 C:\Users\Alek\Desktop\c#\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt POiG.csproj.GenerateResource.Cache
-D:\Biblioteka\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.Edytuj_ksiazke.resources
+D:\Biblioteka\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt POiG.csprojResolveAssemblyReference.cache
+D:\Biblioteka\Biblioteka\Projekt POiG\Projekt POiG\obj\Debug\Projekt_POiG.EdytujKsiazke.resources

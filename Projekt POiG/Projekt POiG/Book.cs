@@ -33,9 +33,9 @@ namespace Projekt_POiG
             }
         }
 
-        public string[] zapelnijcombobox()
+        public string[] zapelnijcombobox2()
         {
-            string[] names = new string[100];
+            string[] title = new string[100];
             string[] tablicaloginow = new string[100];
             string autor = "";
             string tytul = "";
@@ -53,7 +53,7 @@ namespace Projekt_POiG
                 {
                     autor = myReader1.GetString("autor");
                     tytul = myReader1.GetString("tytul");
-                    names[i] = autor + ":" + tytul;
+                    title[i] = autor + ":" + tytul;
                     tablicaloginow[i] = tytul;
                     i++;
                 }
@@ -63,7 +63,7 @@ namespace Projekt_POiG
             {
                 MessageBox.Show(ex.Message);
             }
-            return names;
+            return title;
         }
 
         public void edytujKsiazke(string autor, string tytul, string dataWydania, string Wydawnictwo, string iloscStron, string iloscEgzemblarzy)

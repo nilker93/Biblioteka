@@ -18,11 +18,13 @@ namespace Projekt_POiG
             fill_comboBox1();
         }
         string[] names = new string[100];
+        string[] title = new string[100];
         
         void fill_comboBox1()
         {
             comboBox1.Items.Clear();
             comboBox2.Items.Clear();
+
             int licznik = 0;
             
             User myClass = new User();
@@ -34,10 +36,27 @@ namespace Projekt_POiG
                 comboBox1.Items.Add(names[licznik]);
                 comboBox2.Items.Add(names[licznik]);
                 licznik++;
-
             }
         }
 
+        void fill_comboBox2()
+        {
+            comboBox3.Items.Clear();
+            comboBox4.Items.Clear();
+
+            int licznik = 0;
+
+            Book myClass = new Book();
+
+            title = myClass.zapelnijcombobox2();
+
+            while (title[licznik] != null)
+            {
+                comboBox3.Items.Add(names[licznik]);
+                comboBox4.Items.Add(names[licznik]);
+                licznik++;
+            }
+        }
 
 
         private void button1_Click(object sender, EventArgs e)
@@ -45,12 +64,6 @@ namespace Projekt_POiG
             DodajUzytkownika add = new DodajUzytkownika();
             this.Hide();
             add.Show();
-
-
-            
-
-           
-            //
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -113,23 +126,23 @@ namespace Projekt_POiG
             }
             else
             {
-                int index = names[id].IndexOf(":");
-                string poszukiwanystring = names[id];
-                string login = "";
+                int index = title[id].IndexOf(":");
+                string poszukiwanystring = title[id];
+                string tytul = "";
                 int i = 0;
                 index++;
                 foreach (char s in poszukiwanystring)
                 {
                     if (i >= index)
                     {
-                        login += poszukiwanystring[i];
+                        tytul += poszukiwanystring[i];
                     }
                     i++;
 
                 }
                 Book myClass = new Book();
 
-                myClass.usunKsiazke(login);
+                myClass.usunKsiazke(tytul);
                 fill_comboBox1();
 
             }
@@ -138,6 +151,18 @@ namespace Projekt_POiG
         private void PanelAdministratora_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            EdytujKsiazke add = new EdytujKsiazke();
+            this.Hide();
+            add.Show();
         }
     }
 }
