@@ -33,7 +33,46 @@ namespace Projekt_POiG
             }
         }
 
+        public string[] zapelnijlistbox(string tytul)
+        {
+            string[] names = new string[100];
+            string[] tablicaloginow = new string[100];
+            string autor = "";
+            string tytul1 = "";
+            string DataWydania = "";
+            string iloscStron = "";
+            string wydawnictwo = "";
+            string iloscEgzemblarzy = "";
+            string constring = "SERVER=localhost;DATABASE=biblioteka;UID=root;password=";
+            string Query1 = "select * from books where tytul like '" + tytul + "';";
+            int i = 0;
+            MySqlConnection conDataBase1 = new MySqlConnection(constring);
+            MySqlCommand cmdDataBase1 = new MySqlCommand(Query1, conDataBase1);
+            MySqlDataReader myReader1;
+            try
+            {
+                conDataBase1.Open();
+                myReader1 = cmdDataBase1.ExecuteReader();
+                while (myReader1.Read())
+                {
+                    autor = myReader1.GetString("autor");
+                    tytul1 = myReader1.GetString("tytul");
+                    DataWydania = myReader1.GetString("dataWydania");
+                    iloscStron = myReader1.GetString("iloscStron");
+                    iloscEgzemblarzy = myReader1.GetString("iloscEgzemblarzy");
+                    wydawnictwo = myReader1.GetString("Wydawnictwo");
+                    names[i] = "Autor:" + autor + " \nTytuł:" + tytul1 + " \nData Wydania:" + DataWydania + " \nIlość stron:" + iloscStron + " \nIlość Egzemblarzy:" + iloscEgzemblarzy + " \nWydawnictwo:" + wydawnictwo;
+                    
+                    i++;
+                }
 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return names;
+        }
 
         public string[] zapelnijcombobox()
         {

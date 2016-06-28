@@ -15,6 +15,59 @@ namespace Projekt_POiG
         public PanelUzytkownika()
         {
             InitializeComponent();
+            fill_listBox1();
+        }
+        string[] ksiazkidolisty = new string[100];
+        string[] info = new string[100];
+        void fill_listBox1()
+        {
+           Book myClass = new Book();
+           ksiazkidolisty = myClass.zapelnijcombobox();
+           int licznik = 0;
+           while (ksiazkidolisty[licznik] != null)
+           {
+               listBox1.Items.Add(ksiazkidolisty[licznik]);
+               
+
+               licznik++;
+
+           }
+           licznik = 0;
+            //Uprawnienia.Items.Add("Administrator");
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int id = 0;
+            id = listBox1.SelectedIndex;
+            int index = ksiazkidolisty[id].IndexOf(":");
+            string poszukiwanystring = ksiazkidolisty[id];
+            string tytul = "";
+            int i = 0;
+            index++;
+            foreach (char s in poszukiwanystring)
+            {
+                if (i >= index)
+                {
+                    tytul += poszukiwanystring[i];
+                }
+                i++;
+
+            }
+            Book b1 = new Book();
+            info = b1.zapelnijlistbox(tytul);
+            listBox2.Items.Add(info[0]);
         }
     }
 }
