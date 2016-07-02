@@ -63,9 +63,12 @@
             // 
             this.Pesel.Location = new System.Drawing.Point(188, 228);
             this.Pesel.Margin = new System.Windows.Forms.Padding(4);
+            this.Pesel.MaxLength = 11;
             this.Pesel.Name = "Pesel";
             this.Pesel.Size = new System.Drawing.Size(265, 22);
             this.Pesel.TabIndex = 39;
+            this.Pesel.TextChanged += new System.EventHandler(this.Pesel_TextChanged);
+            this.Pesel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pesel_KeyPress);
             // 
             // Adres
             // 
@@ -146,6 +149,7 @@
             this.Haslo.Name = "Haslo";
             this.Haslo.Size = new System.Drawing.Size(265, 22);
             this.Haslo.TabIndex = 29;
+            this.Haslo.TextChanged += new System.EventHandler(this.Haslo_TextChanged);
             // 
             // Login
             // 
@@ -245,6 +249,7 @@
             this.Controls.Add(this.Imie);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Zarejestruj";
             this.Text = "Zarejestruj";
             this.ResumeLayout(false);

@@ -240,9 +240,11 @@
             // 
             this.Pesel.Location = new System.Drawing.Point(194, 236);
             this.Pesel.Margin = new System.Windows.Forms.Padding(4);
+            this.Pesel.MaxLength = 11;
             this.Pesel.Name = "Pesel";
             this.Pesel.Size = new System.Drawing.Size(265, 22);
             this.Pesel.TabIndex = 20;
+            this.Pesel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pesel_KeyPress);
             // 
             // DodajUzytkownika
             // 
@@ -270,6 +272,7 @@
             this.Controls.Add(this.Imie);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DodajUzytkownika";
             this.Text = "DodajUzytkownika";

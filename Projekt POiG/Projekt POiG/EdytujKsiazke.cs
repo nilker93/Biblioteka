@@ -38,6 +38,33 @@ namespace Projekt_POiG
             this.Hide();
             add.Show();
         }
+
+        private void DataWydania_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char nl = e.KeyChar;
+            if (!Char.IsDigit(nl) && nl != 8)
+            {
+                e.Handled = true;
+            }    
+        }
+
+        private void IloscStron_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char nl = e.KeyChar;
+            if (!Char.IsDigit(nl) && nl != 8)
+            {
+                e.Handled = true;
+            }    
+        }
+
+        private void IloscEgzemplarzy_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char nl = e.KeyChar;
+            if (!Char.IsDigit(nl) && nl != 8)
+            {
+                e.Handled = true;
+            }    
+        }
     }
 }
 /*

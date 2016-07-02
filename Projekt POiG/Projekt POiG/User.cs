@@ -42,12 +42,21 @@ namespace Projekt_POiG
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+        /*
+        public void czyLoginIstnieje(string login)
+        {
+            string constring = "SERVER=localhost;DATABASE=biblioteka;UID=root;password=";
+            string Query1 = "SELECT COUNT(*) FROM login WHERE username='" + login + "' ;";
+            if (Query1.ToString != 0)
+            {
 
             }
-
-
+            
         }
-
+         */
+        
 
         public void usunuzytkownika(string login)
         {

@@ -55,6 +55,7 @@ namespace Projekt_POiG
             {
                 comboBox1.Items.Add(names[licznik]);
                 comboBox2.Items.Add(names[licznik]);
+                comboBox5.Items.Add(names[licznik]);
                
                 licznik++;
 
@@ -272,6 +273,11 @@ namespace Projekt_POiG
         }
 
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

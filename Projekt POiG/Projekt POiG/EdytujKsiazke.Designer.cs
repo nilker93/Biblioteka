@@ -113,6 +113,7 @@
             this.IloscEgzemplarzy.Name = "IloscEgzemplarzy";
             this.IloscEgzemplarzy.Size = new System.Drawing.Size(218, 22);
             this.IloscEgzemplarzy.TabIndex = 42;
+            this.IloscEgzemplarzy.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IloscEgzemplarzy_KeyPress);
             // 
             // IloscStron
             // 
@@ -120,6 +121,7 @@
             this.IloscStron.Name = "IloscStron";
             this.IloscStron.Size = new System.Drawing.Size(218, 22);
             this.IloscStron.TabIndex = 41;
+            this.IloscStron.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IloscStron_KeyPress);
             // 
             // Wydawnictwo
             // 
@@ -134,6 +136,7 @@
             this.DataWydania.Name = "DataWydania";
             this.DataWydania.Size = new System.Drawing.Size(218, 22);
             this.DataWydania.TabIndex = 39;
+            this.DataWydania.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DataWydania_KeyPress);
             // 
             // Tytul
             // 
@@ -167,6 +170,7 @@
             this.Controls.Add(this.DataWydania);
             this.Controls.Add(this.Tytul);
             this.Controls.Add(this.Autor);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Edytuj_ksiazke";
             this.Text = "Edytuj_ksiazke";
             this.ResumeLayout(false);

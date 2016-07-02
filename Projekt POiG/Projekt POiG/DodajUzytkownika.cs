@@ -46,18 +46,43 @@ namespace Projekt_POiG
                 uprawnienie = 0;
 
             }
-            myClass.dodajUzytkownika(UserMaxId, Imie.Text, Nazwisko.Text, Login.Text, Haslo.Text, uprawnienie, dateTimePicker1.Value.Date, Miasto.Text, Adres.Text, Pesel.Text);
-            //data = dateTimePicker1.Value.Date;
-            int i;
-            PanelAdministratora add = new PanelAdministratora();
-            this.Hide();
-            add.Show();
+            string a = Haslo.Text;
+            string b = Powtorzhaslo.Text;
+            if (a != b)
+            {
+                MessageBox.Show("Hasła są niezgodne!");
+            }
+            else
+            {
+                if (Pesel.Text.Length != 11)
+                {
+                    MessageBox.Show("Pesel jest za krótki!");
+                }
+                else
+                {
+                    myClass.dodajUzytkownika(UserMaxId, Imie.Text, Nazwisko.Text, Login.Text, Haslo.Text, uprawnienie, dateTimePicker1.Value.Date, Miasto.Text, Adres.Text, Pesel.Text);
+                    //data = dateTimePicker1.Value.Date;
+                    int i;
+                    PanelAdministratora add = new PanelAdministratora();
+                    this.Hide();
+                    add.Show();
+                }
+            }
 
         }
 
         private void label10_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Pesel_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char nl = e.KeyChar;
+            if (!Char.IsDigit(nl) && nl != 8)
+            {
+                e.Handled = true;
+            }   
         }
     }
 }

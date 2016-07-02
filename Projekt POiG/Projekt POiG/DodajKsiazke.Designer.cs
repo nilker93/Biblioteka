@@ -103,6 +103,8 @@
             this.IloscEgzemplarzy.Name = "IloscEgzemplarzy";
             this.IloscEgzemplarzy.Size = new System.Drawing.Size(218, 22);
             this.IloscEgzemplarzy.TabIndex = 23;
+            this.IloscEgzemplarzy.TextChanged += new System.EventHandler(this.IloscEgzemplarzy_TextChanged);
+            this.IloscEgzemplarzy.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IloscEgzemplarzy_KeyPress);
             // 
             // IloscStron
             // 
@@ -110,6 +112,7 @@
             this.IloscStron.Name = "IloscStron";
             this.IloscStron.Size = new System.Drawing.Size(218, 22);
             this.IloscStron.TabIndex = 22;
+            this.IloscStron.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IloscStron_KeyPress);
             // 
             // Wydawnictwo
             // 
@@ -124,6 +127,7 @@
             this.DataWydania.Name = "DataWydania";
             this.DataWydania.Size = new System.Drawing.Size(218, 22);
             this.DataWydania.TabIndex = 20;
+            this.DataWydania.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DataWydania_KeyPress);
             // 
             // Tytul
             // 
@@ -167,6 +171,7 @@
             this.Controls.Add(this.DataWydania);
             this.Controls.Add(this.Tytul);
             this.Controls.Add(this.Autor);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "DodajKsiazke";
             this.Text = "DodajKsiazke";
             this.Load += new System.EventHandler(this.DodajKsiazke_Load);

@@ -49,12 +49,42 @@ namespace Projekt_POiG
                 uprawnienie = 0;
 
             }
-            myClass.edytujuzytkownika(jakiUzytkownikMaBycEdytowany, textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, uprawnienie, dateTimePicker1.Value.Date, textBox6.Text, textBox7.Text, textBox8.Text);
-            //data = dateTimePicker1.Value.Date;
-            int i;
-            PanelAdministratora add = new PanelAdministratora();
-            this.Hide();
-            add.Show();
+            string a = textBox4.Text;
+            string b = textBox5.Text;
+            if (a != b)
+            {
+                MessageBox.Show("Hasła są niezgodne!");
+            }
+            else
+            {
+                if (textBox8.Text.Length != 11)
+                {
+                    MessageBox.Show("Pesel jest za krótki!");
+                }
+                else
+                {
+                    myClass.edytujuzytkownika(jakiUzytkownikMaBycEdytowany, textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, uprawnienie, dateTimePicker1.Value.Date, textBox6.Text, textBox7.Text, textBox8.Text);
+                    //data = dateTimePicker1.Value.Date;
+                    int i;
+                    PanelAdministratora add = new PanelAdministratora();
+                    this.Hide();
+                    add.Show();
+                }
+            }
+        }
+
+        private void textBox8_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char nl = e.KeyChar;
+            if (!Char.IsDigit(nl) && nl != 8)
+            {
+                e.Handled = true;
+            }   
+        }
+
+        private void EdytujUżytkownika_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
