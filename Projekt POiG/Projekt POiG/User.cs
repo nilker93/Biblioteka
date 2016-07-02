@@ -14,6 +14,48 @@ namespace Projekt_POiG
 {
     class User
     {
+
+
+        public int pobierzId(string login)
+        {
+            int id1 = 0;
+            string id = "0";
+            string constring = "SERVER=localhost;DATABASE=biblioteka;UID=root;password=";
+            string Query = "select * from users where login like '" + login + "' ;";
+
+            MySqlConnection conDataBase = new MySqlConnection(constring);
+            MySqlCommand cmdDataBase = new MySqlCommand(Query, conDataBase);
+            MySqlDataReader myReader;
+            try
+            {
+                conDataBase.Open();
+                myReader = cmdDataBase.ExecuteReader();
+                while (myReader.Read())
+                {
+                    id = myReader.GetString("idk");
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            try
+            {
+                id1 = Int32.Parse(id);
+            }
+
+            catch (FormatException er)
+            {
+                Console.WriteLine(er.Message);
+            }
+
+
+            return id1;
+        }
+
+
+
         public string[] tableoflogin = new string[100];
 
         public User(string[] names)

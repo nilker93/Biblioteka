@@ -19,6 +19,7 @@ namespace Projekt_POiG
         }
         string ObecnieZalogowanyUzytkownik = "";
         int idksiazki =0;
+        int idusera = 0;
         string tytul= "";
         string[] ksiazkidolisty = new string[100];
         string[] info = new string[100];
@@ -51,6 +52,9 @@ namespace Projekt_POiG
         {
             Book pobierztuId = new Book();
             idksiazki = pobierztuId.pobierzId(tytul);
+
+            User pobierztuIdusera = new User();
+            idusera = pobierztuIdusera.pobierzId(ObecnieZalogowanyUzytkownik);
             int k;
 
         }
