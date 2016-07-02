@@ -20,6 +20,7 @@ namespace Projekt_POiG
         }
         string[] ksiazkidolisty = new string[100];
         string[] info = new string[100];
+        string ObecnieZalogowanyUzytkownik = "";
         void fill_listBox1()
         {
             Book myClass = new Book();
@@ -69,6 +70,13 @@ namespace Projekt_POiG
             }
         }
 
+
+        public void sesja(string uzytkownik)
+        {
+            ObecnieZalogowanyUzytkownik = uzytkownik;
+
+
+        }
 
 
         private void button1_Click(object sender, EventArgs e)

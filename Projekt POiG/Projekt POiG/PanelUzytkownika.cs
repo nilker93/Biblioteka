@@ -17,6 +17,9 @@ namespace Projekt_POiG
             InitializeComponent();
             fill_listBox1();
         }
+        string ObecnieZalogowanyUzytkownik = "";
+        int idksiazki =0;
+        string tytul= "";
         string[] ksiazkidolisty = new string[100];
         string[] info = new string[100];
         void fill_listBox1()
@@ -37,8 +40,18 @@ namespace Projekt_POiG
             
         }
 
+        public void sesja(string uzytkownik)
+        {
+            ObecnieZalogowanyUzytkownik = uzytkownik;
+
+
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
+            Book pobierztuId = new Book();
+            idksiazki = pobierztuId.pobierzId(tytul);
+            int k;
 
         }
 
@@ -49,13 +62,14 @@ namespace Projekt_POiG
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            tytul = "";
             listBox2.Items.Clear();
             int id = 0;
 
             id = listBox1.SelectedIndex;
             int index = ksiazkidolisty[id].IndexOf(":");
             string poszukiwanystring = ksiazkidolisty[id];
-            string tytul = "";
+            
             int i = 0;
             index++;
             foreach (char s in poszukiwanystring)

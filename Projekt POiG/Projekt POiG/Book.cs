@@ -14,6 +14,45 @@ namespace Projekt_POiG
 {
     class Book
     {
+        public int pobierzId(string tytul)
+        {
+            int id1 = 0;
+            string id = "0";
+            string constring = "SERVER=localhost;DATABASE=biblioteka;UID=root;password=";
+            string Query = "select * from books where tytul like '" + tytul + "' ;";
+
+            MySqlConnection conDataBase = new MySqlConnection(constring);
+            MySqlCommand cmdDataBase = new MySqlCommand(Query, conDataBase);
+            MySqlDataReader myReader;
+            try
+            {
+                conDataBase.Open();
+                myReader = cmdDataBase.ExecuteReader();
+                while (myReader.Read())
+                {
+                    id = myReader.GetString("idk");
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            try
+            {
+                id1 = Int32.Parse(id);
+            }
+
+            catch (FormatException er)
+            {
+                Console.WriteLine(er.Message);
+            }
+
+          
+            return id1;
+        }
+
+
         public void usunKsiazke(string tytul)
         {
             string constring = "SERVER=localhost;DATABASE=biblioteka;UID=root;password=";

@@ -53,12 +53,14 @@ namespace Projekt_POiG
                     if (sUprawnienia == true)
                     {
                         PanelAdministratora admin = new PanelAdministratora();
+                        admin.sesja(textBox1.Text);
                         this.Hide();
                         admin.Show();
                     }
                     else
                     {
                         PanelUzytkownika user = new PanelUzytkownika();
+                        user.sesja(textBox1.Text);
                         this.Hide();
                         user.Show();
                     }
