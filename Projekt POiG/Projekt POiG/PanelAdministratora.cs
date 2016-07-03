@@ -16,16 +16,36 @@ namespace Projekt_POiG
         {
             InitializeComponent();
             fill_comboBox1();
-             fill_listBox1();
+            fill_listBox1();
         }
+        string wybranyuzytkownikdofillcombo5 = "";
         int idksiazki = 0;
         int idusera = 0;
         string[] ksiazkidolisty = new string[100];
         string[] info = new string[100];
         string ObecnieZalogowanyUzytkownik = "";
         string tytul = "";
+
+        void OnClickFillcomboBox5()
+        {
+            listBox3.Items.Clear();
+            int licznik =0;
+            int iduzytkownika = 0;
+            User u1 = new User();
+            iduzytkownika = u1.pobierzId(wybranyuzytkownikdofillcombo5);
+            Library zwroc = new Library();
+            string[] pobierzjakjest = new string[100];
+            pobierzjakjest = zwroc.ZapelnijListboxPozycjami(iduzytkownika);
+            while (pobierzjakjest[licznik] != null)
+            {
+                listBox3.Items.Add(pobierzjakjest[licznik]);
+                licznik++;
+            }
+        }
+
         void fill_listBox1()
         {
+           
             Book myClass = new Book();
             ksiazkidolisty = myClass.zapelnijcombobox();
             int licznik = 0;
@@ -41,7 +61,7 @@ namespace Projekt_POiG
         }
         string[] names = new string[100];
         string[] ksiazki = new string[100];
-        
+
         void fill_comboBox1()
         {
             comboBox1.Items.Clear();
@@ -50,7 +70,7 @@ namespace Projekt_POiG
             comboBox5.Items.Clear();
             comboBox4.Items.Clear();
             int licznik = 0;
-            
+
             User myClass = new User();
             Book myBook = new Book();
             names = myClass.zapelnijcombobox();
@@ -61,7 +81,7 @@ namespace Projekt_POiG
 
                 comboBox2.Items.Add(names[licznik]);
                 comboBox5.Items.Add(names[licznik]);
-               
+
                 licznik++;
 
             }
@@ -92,9 +112,9 @@ namespace Projekt_POiG
             add.Show();
 
 
-            
 
-           
+
+
             //
         }
 
@@ -129,11 +149,11 @@ namespace Projekt_POiG
                 this.Hide();
 
                 add.Show();
-               
+
             }
-            
-            
-            
+
+
+
 
         }
 
@@ -147,14 +167,14 @@ namespace Projekt_POiG
             }
             else
             {
-                
-                
+
+
                 int index = names[id].IndexOf(":");
                 string poszukiwanystring = names[id];
                 string login = "";
                 int i = 0;
                 index++;
-                foreach(char s in poszukiwanystring)
+                foreach (char s in poszukiwanystring)
                 {
                     if (i >= index)
                     {
@@ -167,9 +187,9 @@ namespace Projekt_POiG
 
                 myClass.usunuzytkownika(login);
                 fill_comboBox1();
-                
+
             }
-           
+
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -257,7 +277,7 @@ namespace Projekt_POiG
             id = listBox1.SelectedIndex;
             int index = ksiazkidolisty[id].IndexOf(":");
             string poszukiwanystring = ksiazkidolisty[id];
-             tytul = "";
+            tytul = "";
             int i = 0;
             index++;
             foreach (char s in poszukiwanystring)
@@ -319,6 +339,38 @@ namespace Projekt_POiG
         private void button4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int id = 0;
+            id = comboBox5.SelectedIndex;
+            if (id == -1)
+            {
+                MessageBox.Show("Proszę wybrać wpierw użytkownika którego chcesz usunąć!");
+            }
+            else
+            {
+
+
+                int index = names[id].IndexOf(":");
+                string poszukiwanystring = names[id];
+                wybranyuzytkownikdofillcombo5 = "";
+                int i = 0;
+                index++;
+                foreach (char s in poszukiwanystring)
+                {
+                    if (i >= index)
+                    {
+                        wybranyuzytkownikdofillcombo5 += poszukiwanystring[i];
+                    }
+                    i++;
+
+
+                }
+                OnClickFillcomboBox5();
+            }
+            
         }
     }
 }

@@ -57,10 +57,10 @@ namespace Projekt_POiG
                         this.Hide();
                         admin.Show();
                     }
-                    else
+                    else if (sUprawnienia == false)
                     {
                         PanelUzytkownika user = new PanelUzytkownika();
-                        user.sesja(textBox1.Text);
+                        user.SesjaUser(textBox1.Text);
                         this.Hide();
                         user.Show();
                     }

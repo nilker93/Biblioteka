@@ -16,6 +16,7 @@ namespace Projekt_POiG
         {
             InitializeComponent();
             fill_listBox1();
+            
         }
         string ObecnieZalogowanyUzytkownik = "";
         int idksiazki =0;
@@ -23,6 +24,29 @@ namespace Projekt_POiG
         string tytul= "";
         string[] ksiazkidolisty = new string[100];
         string[] info = new string[100];
+        public void SesjaUser(string uzytkownik)
+        {
+            ObecnieZalogowanyUzytkownik = uzytkownik;
+            OnClickFillcomboBox5();
+
+        }
+        void OnClickFillcomboBox5()
+        {
+            listBox3.Items.Clear();
+            int licznik = 0;
+            int iduzytkownika = 0;
+            User u1 = new User();
+            iduzytkownika = u1.pobierzId(ObecnieZalogowanyUzytkownik);
+            Library zwroc = new Library();
+            string[] pobierzjakjest = new string[100];
+            pobierzjakjest = zwroc.ZapelnijListboxPozycjami(iduzytkownika);
+            while (pobierzjakjest[licznik] != null)
+            {
+                listBox3.Items.Add(pobierzjakjest[licznik]);
+                licznik++;
+            }
+        }
+
         void fill_listBox1()
         {
            Book myClass = new Book();
@@ -41,12 +65,7 @@ namespace Projekt_POiG
             
         }
 
-        public void sesja(string uzytkownik)
-        {
-            ObecnieZalogowanyUzytkownik = uzytkownik;
-
-
-        }
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
