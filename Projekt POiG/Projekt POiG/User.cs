@@ -32,7 +32,7 @@ namespace Projekt_POiG
                 myReader = cmdDataBase.ExecuteReader();
                 while (myReader.Read())
                 {
-                    id = myReader.GetString("idk");
+                    id = myReader.GetString("ido");
 
                 }
             }

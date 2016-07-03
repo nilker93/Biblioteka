@@ -50,12 +50,25 @@ namespace Projekt_POiG
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Book pobierztuId = new Book();
-            idksiazki = pobierztuId.pobierzId(tytul);
+            if (tytul != "")
+            {
+                int maksymalneIDWyporzyczenia;
+                Book pobierztuId = new Book();
+                idksiazki = pobierztuId.pobierzId(tytul);
 
-            User pobierztuIdusera = new User();
-            idusera = pobierztuIdusera.pobierzId(ObecnieZalogowanyUzytkownik);
-            int k;
+                User pobierztuIdusera = new User();
+                idusera = pobierztuIdusera.pobierzId(ObecnieZalogowanyUzytkownik);
+
+                string Query = "select idw from wyporzyczanie WHERE idw=(SELECT max(idw) FROM wyporzyczanie);";
+                string constring = "SERVER=localhost;DATABASE=biblioteka;UID=root;password=";
+                Library Biblioteka = new Library();
+
+                maksymalneIDWyporzyczenia = Biblioteka.pobierzMaksymalneId(constring, Query);
+                Biblioteka.WniosekORezerwacje(maksymalneIDWyporzyczenia,idksiazki,idusera);
+                int k;
+            }
+            else
+                MessageBox.Show("Proszę wybrać książkę którą chcesz pożyczyć!");
 
         }
 
