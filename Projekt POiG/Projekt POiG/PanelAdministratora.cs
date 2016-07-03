@@ -18,9 +18,12 @@ namespace Projekt_POiG
             fill_comboBox1();
              fill_listBox1();
         }
+        int idksiazki = 0;
+        int idusera = 0;
         string[] ksiazkidolisty = new string[100];
         string[] info = new string[100];
         string ObecnieZalogowanyUzytkownik = "";
+        string tytul = "";
         void fill_listBox1()
         {
             Book myClass = new Book();
@@ -44,6 +47,7 @@ namespace Projekt_POiG
             comboBox1.Items.Clear();
             comboBox2.Items.Clear();
             comboBox3.Items.Clear();
+            comboBox5.Items.Clear();
             comboBox4.Items.Clear();
             int licznik = 0;
             
@@ -54,6 +58,7 @@ namespace Projekt_POiG
             while (names[licznik] != null)
             {
                 comboBox1.Items.Add(names[licznik]);
+
                 comboBox2.Items.Add(names[licznik]);
                 comboBox5.Items.Add(names[licznik]);
                
@@ -252,7 +257,7 @@ namespace Projekt_POiG
             id = listBox1.SelectedIndex;
             int index = ksiazkidolisty[id].IndexOf(":");
             string poszukiwanystring = ksiazkidolisty[id];
-            string tytul = "";
+             tytul = "";
             int i = 0;
             index++;
             foreach (char s in poszukiwanystring)
@@ -278,6 +283,40 @@ namespace Projekt_POiG
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if (tytul != "")
+            {
+                bool CzyPodanaKsiazkaZostalaJuzWyporzyczona = false;
+                int maksymalneIDWyporzyczenia;
+                Book pobierztuId = new Book();
+                idksiazki = pobierztuId.pobierzId(tytul);
+
+                User pobierztuIdusera = new User();
+                idusera = pobierztuIdusera.pobierzId(ObecnieZalogowanyUzytkownik);
+
+                string Query = "select idw from wyporzyczanie WHERE idw=(SELECT max(idw) FROM wyporzyczanie);";
+                string constring = "SERVER=localhost;DATABASE=biblioteka;UID=root;password=";
+                Library Biblioteka = new Library();
+                CzyPodanaKsiazkaZostalaJuzWyporzyczona = Biblioteka.SprawdzCzyKsiazkaJestJuzWyporzyczonaPrzezDanegoUzytkownika(idksiazki, idusera);
+                if (CzyPodanaKsiazkaZostalaJuzWyporzyczona == false)
+                {
+                    maksymalneIDWyporzyczenia = Biblioteka.pobierzMaksymalneId(constring, Query);
+                    Biblioteka.WniosekORezerwacje(maksymalneIDWyporzyczenia, idksiazki, idusera);
+                }
+                else
+                    MessageBox.Show("Nie możesz wyporzyczyc kolejny raz tej samej ksiazki!");
+                int k;
+            }
+            else
+                MessageBox.Show("Proszę wybrać książkę którą chcesz pożyczyć!");
+        }
+
+        private void button4_Click(object sender, EventArgs e)
         {
 
         }

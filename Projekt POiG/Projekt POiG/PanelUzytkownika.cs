@@ -52,6 +52,7 @@ namespace Projekt_POiG
         {
             if (tytul != "")
             {
+                bool CzyPodanaKsiazkaZostalaJuzWyporzyczona = false;
                 int maksymalneIDWyporzyczenia;
                 Book pobierztuId = new Book();
                 idksiazki = pobierztuId.pobierzId(tytul);
@@ -62,9 +63,14 @@ namespace Projekt_POiG
                 string Query = "select idw from wyporzyczanie WHERE idw=(SELECT max(idw) FROM wyporzyczanie);";
                 string constring = "SERVER=localhost;DATABASE=biblioteka;UID=root;password=";
                 Library Biblioteka = new Library();
-
-                maksymalneIDWyporzyczenia = Biblioteka.pobierzMaksymalneId(constring, Query);
-                Biblioteka.WniosekORezerwacje(maksymalneIDWyporzyczenia,idksiazki,idusera);
+                CzyPodanaKsiazkaZostalaJuzWyporzyczona = Biblioteka.SprawdzCzyKsiazkaJestJuzWyporzyczonaPrzezDanegoUzytkownika(idksiazki,idusera);
+                if (CzyPodanaKsiazkaZostalaJuzWyporzyczona == false)
+                {
+                    maksymalneIDWyporzyczenia = Biblioteka.pobierzMaksymalneId(constring, Query);
+                    Biblioteka.WniosekORezerwacje(maksymalneIDWyporzyczenia, idksiazki, idusera);
+                }
+                else
+                    MessageBox.Show("Nie możesz wyporzyczyc kolejny raz tej samej ksiazki!");
                 int k;
             }
             else
