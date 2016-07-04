@@ -13,7 +13,28 @@ namespace Projekt_POiG
 {
     class Library
     {
+        public void ZmienDate(int idKsiazki, int isOsoby, DateTime data)
+        {
+            string constring = "SERVER=localhost;DATABASE=biblioteka;UID=root;password=";
+            string Query1 = "update wyporzyczanie set data1='" + data + "' where idk like " + idKsiazki + " and ido like " + isOsoby + ";";
+            string id = "0";
+            int id1 = 0;
+            MySqlConnection conDataBase1 = new MySqlConnection(constring);
+            MySqlCommand cmdDataBase1 = new MySqlCommand(Query1, conDataBase1);
+            MySqlDataReader myReader1;
+            try
+            {
+                conDataBase1.Open();
+                myReader1 = cmdDataBase1.ExecuteReader();
+               
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
+
+        }
         public string[] ZapelnijListboxPozycjami( int isOsoby)
         {
             Book zwroc = new Book();

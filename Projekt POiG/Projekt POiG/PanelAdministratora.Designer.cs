@@ -37,7 +37,7 @@
             this.listBox3 = new System.Windows.Forms.ListBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.pozycz = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
@@ -140,16 +140,16 @@
             this.listBox1.TabIndex = 8;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
-            // button4
+            // pozycz
             // 
-            this.button4.Location = new System.Drawing.Point(616, 251);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(134, 29);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "Pożycz";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.pozycz.Location = new System.Drawing.Point(616, 251);
+            this.pozycz.Margin = new System.Windows.Forms.Padding(2);
+            this.pozycz.Name = "pozycz";
+            this.pozycz.Size = new System.Drawing.Size(134, 29);
+            this.pozycz.TabIndex = 7;
+            this.pozycz.Text = "Pożycz";
+            this.pozycz.UseVisualStyleBackColor = true;
+            this.pozycz.Click += new System.EventHandler(this.button4_Click);
             // 
             // comboBox1
             // 
@@ -281,7 +281,7 @@
             this.Controls.Add(this.listBox3);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.pozycz);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -305,7 +305,7 @@
         private System.Windows.Forms.ListBox listBox3;
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button pozycz;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox3;

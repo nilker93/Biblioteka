@@ -26,6 +26,52 @@ namespace Projekt_POiG
         string ObecnieZalogowanyUzytkownik = "";
         string tytul = "";
 
+        string CzyJestZarezerwowana = "";
+        string wybranaksiazka = "";
+        string uzytkownik = "";
+        void PobierzUzytkownikaiKsiazkeZComboBox3()
+        {
+            CzyJestZarezerwowana = "";
+             wybranaksiazka = "";
+                string pobranyitemzlistbox = "";
+                pobranyitemzlistbox = listBox3.SelectedItem.ToString();
+                int index = pobranyitemzlistbox.IndexOf(":");
+                string poszukiwanystring = pobranyitemzlistbox;
+                wybranyuzytkownikdofillcombo5 = "";
+                int i = 0;
+                index++;
+                                    foreach (char s in poszukiwanystring)
+                                    {
+                                        if (i < index)
+                                        {
+                                            CzyJestZarezerwowana += poszukiwanystring[i];
+                                        }
+
+                                       
+                                        if (i >= index)
+                                        {
+                                            wybranaksiazka += poszukiwanystring[i];
+                                        }
+                                        i++;
+
+
+                                    }
+                i = 0;
+
+                 uzytkownik = "";
+                string pobranycombobox = "";
+                pobranycombobox = comboBox5.SelectedItem.ToString();
+                int index1 = pobranycombobox.IndexOf(":");
+                foreach (char s in pobranycombobox)
+                {
+                    if (i > index1)
+                    {
+                        uzytkownik += pobranycombobox[i];
+                    }
+                    i++;
+
+                }
+        }
         void OnClickFillcomboBox5()
         {
             listBox3.Items.Clear();
@@ -338,8 +384,41 @@ namespace Projekt_POiG
 
         private void button4_Click(object sender, EventArgs e)
         {
+            int id = 0;
+            id = listBox3.SelectedIndex;
+            if (id == -1)
+            {
+                MessageBox.Show("Proszę wybrać książkę którą chcesz oddać!");
+            }
+            else
+            {
+                int obecneIdKsiazkiZComboBox3 = 0;
+                int obecneIdUseraZComboBox3 = 0;
+                PobierzUzytkownikaiKsiazkeZComboBox3();
+                if (CzyJestZarezerwowana == "Prośba O Rezerwację:")
+                {
+                    Book pobierztuId = new Book();
+                    obecneIdKsiazkiZComboBox3 = pobierztuId.pobierzId(wybranaksiazka);
+                    Library Pozycz = new Library();
+                   
+                    User pobierztuIdusera = new User();
+                    obecneIdUseraZComboBox3 = pobierztuIdusera.pobierzId(uzytkownik);
 
-        }
+                    DateTime when = DateTime.Today;
+                    DateTime miesiacpozniej;
+                    miesiacpozniej = when.AddMonths(1);
+                    
+                    Pozycz.ZmienDate(obecneIdKsiazkiZComboBox3, obecneIdUseraZComboBox3, miesiacpozniej);
+                    int jk;
+                }
+                else
+                    MessageBox.Show("Można pożyczyć tylko książki które zostały uprzednio zarezerwowane!");
+
+
+                                    }
+                int k;
+            }
+        
 
         private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
         {
