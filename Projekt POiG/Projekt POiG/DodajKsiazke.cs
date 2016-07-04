@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using MySql.Data;
+using MySql.Data.MySqlClient;
 namespace Projekt_POiG
 {
     public partial class DodajKsiazke : Form
@@ -22,6 +23,42 @@ namespace Projekt_POiG
         private void DodajKsiazke_Load(object sender, EventArgs e)
         {
 
+        }
+        public string[] pobierzWszystkieTytuly()
+        {
+
+            string[] tablicatytulow = new string[100];
+
+            string tytul = "";
+            string constring = "SERVER=localhost;DATABASE=biblioteka;UID=root;password=";
+            string Query1 = "select * from books ;";
+            int i = 0;
+            MySqlConnection conDataBase1 = new MySqlConnection(constring);
+            MySqlCommand cmdDataBase1 = new MySqlCommand(Query1, conDataBase1);
+            MySqlDataReader myReader1;
+            try
+            {
+                conDataBase1.Open();
+                myReader1 = cmdDataBase1.ExecuteReader();
+                while (myReader1.Read())
+                {
+
+                    tytul = myReader1.GetString("tytul");
+
+                    tablicatytulow[i] = tytul;
+                    i++;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+
+
+
+            return tablicatytulow;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -43,12 +80,34 @@ namespace Projekt_POiG
 
             }
             */
-            myClass.dodajKsiazke(BookMaxId, Autor.Text, Tytul.Text, DataWydania.Text, Wydawnictwo.Text, IloscStron.Text, IloscEgzemplarzy.Text);
-            //data = dateTimePicker1.Value.Date;
-            int i;
-            PanelAdministratora add = new PanelAdministratora();
-            this.Hide();
-            add.Show();
+            int j = 0;
+            string[] wszystkieTytuly = new string[100];
+            bool czyistniejedanytytul = false;
+            wszystkieTytuly = pobierzWszystkieTytuly();
+            while (wszystkieTytuly[j] != null)
+                    {
+                        if (Tytul.Text == wszystkieTytuly[j])
+                        {
+                            czyistniejedanytytul = true;
+                        }
+                        j++;
+
+                    }
+            if (czyistniejedanytytul == true)
+                     {
+                         MessageBox.Show("Podana książka o tytule już istnieję");
+                     }
+                     else
+                     {
+
+
+                         myClass.dodajKsiazke(BookMaxId, Autor.Text, Tytul.Text, DataWydania.Text, Wydawnictwo.Text, IloscStron.Text, IloscEgzemplarzy.Text);
+                         //data = dateTimePicker1.Value.Date;
+                         int i;
+                         PanelAdministratora add = new PanelAdministratora();
+                         this.Hide();
+                         add.Show();
+                     }
         }
 
         private void IloscStron_KeyPress(object sender, KeyPressEventArgs e)

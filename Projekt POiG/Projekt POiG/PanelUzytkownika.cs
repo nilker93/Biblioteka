@@ -197,5 +197,12 @@ namespace Projekt_POiG
             }
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form1 add = new Form1();
+            this.Hide();
+            add.Show();
+        }
     }
 }
