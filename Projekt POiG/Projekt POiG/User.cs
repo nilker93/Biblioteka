@@ -56,16 +56,7 @@ namespace Projekt_POiG
 
 
 
-        public string[] tableoflogin = new string[100];
-
-        public User(string[] names)
-        {
-            this.tableoflogin = names;
-        }
-        public User()
-        {
-            
-        }
+       
 
         public void edytujuzytkownika(string jakiLoginZmienic, string imie, string nazwisko, string login, string haslo, int uprawnienia, DateTime date, string miasto, string adres, string pesel)
         {

@@ -32,7 +32,8 @@ namespace Projekt_POiG
         private void button1_Click(object sender, EventArgs e)
         {
             //////////
-      
+            int j = 0;
+            string[] wszystkieloginy = new string[100];
             string Query = "select ido from users WHERE ido=(SELECT max(ido) FROM users);";
             string constring = "SERVER=localhost;DATABASE=biblioteka;UID=root;password=";
             User myClass = new User();
@@ -60,12 +61,30 @@ namespace Projekt_POiG
                 }
                 else
                 {
-                    myClass.dodajUzytkownika(UserMaxId, Imie.Text, Nazwisko.Text, Login.Text, Haslo.Text, uprawnienie, dateTimePicker1.Value.Date, Miasto.Text, Adres.Text, Pesel.Text);
-                    //data = dateTimePicker1.Value.Date;
-                    int i;
-                    PanelAdministratora add = new PanelAdministratora();
-                    this.Hide();
-                    add.Show();
+                    bool czyistniejedanylogin = false;
+                     wszystkieloginy = myClass.pobierzWszystkieLoginy();
+                     while (wszystkieloginy[j]!=null)
+                    {
+                        if (Login.Text == wszystkieloginy[j])
+                        {
+                            czyistniejedanylogin = true;
+                        }
+                        j++;
+
+                    }
+                     if (czyistniejedanylogin == true)
+                     {
+                         MessageBox.Show("Podany login już istnieję");
+                     }
+                     else
+                     {
+                         myClass.dodajUzytkownika(UserMaxId, Imie.Text, Nazwisko.Text, Login.Text, Haslo.Text, uprawnienie, dateTimePicker1.Value.Date, Miasto.Text, Adres.Text, Pesel.Text);
+                         //data = dateTimePicker1.Value.Date;
+                         int i;
+                         PanelAdministratora add = new PanelAdministratora();
+                         this.Hide();
+                         add.Show();
+                     }
                 }
             }
 

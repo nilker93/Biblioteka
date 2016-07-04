@@ -24,10 +24,11 @@ namespace Projekt_POiG
 
         private void button1_Click(object sender, EventArgs e)
         {
-        
 
-           
+
+            string[] wszystkieloginy = new string[100];
             //////////
+            int j = 0;
             uprawnienie = 0;
             string Query = "select ido from users WHERE ido=(SELECT max(ido) FROM users);";
             string constring = "SERVER=localhost;DATABASE=biblioteka;UID=root;password=";
@@ -47,13 +48,31 @@ namespace Projekt_POiG
                 }
                 else
                 {
-                    myClass.dodajUzytkownika(UserMaxId, Imie.Text, Nazwisko.Text, Login.Text, Haslo.Text, uprawnienie, dateTimePicker1.Value.Date, Miasto.Text, Adres.Text, Pesel.Text);
-                    //data = dateTimePicker1.Value.Date;
-                    //int i;
+                    bool czyistniejedanylogin = false;
+                     wszystkieloginy = myClass.pobierzWszystkieLoginy();
+                     while (wszystkieloginy[j]!=null)
+                    {
+                        if (Login.Text == wszystkieloginy[j])
+                        {
+                            czyistniejedanylogin = true;
+                        }
+                        j++;
 
-                    Form1 add = new Form1();
-                    this.Hide();
-                    add.Show();
+                    }
+                     if (czyistniejedanylogin == true)
+                     {
+                         MessageBox.Show("Podany login już istnieję");
+                     }
+                     else
+                     {
+                         myClass.dodajUzytkownika(UserMaxId, Imie.Text, Nazwisko.Text, Login.Text, Haslo.Text, uprawnienie, dateTimePicker1.Value.Date, Miasto.Text, Adres.Text, Pesel.Text);
+                         //data = dateTimePicker1.Value.Date;
+                         //int i;
+
+                         Form1 add = new Form1();
+                         this.Hide();
+                         add.Show();
+                     }
                 }
             }
 

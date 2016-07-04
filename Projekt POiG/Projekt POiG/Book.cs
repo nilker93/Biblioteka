@@ -14,6 +14,7 @@ namespace Projekt_POiG
 {
     class Book
     {
+        
         public string PobierzDaneDlaId(int id)
         {
             string[] names = new string[100];
@@ -45,7 +46,7 @@ namespace Projekt_POiG
             }
             return tytul;
         }
-
+        
 
 
 

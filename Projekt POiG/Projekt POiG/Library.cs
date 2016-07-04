@@ -275,7 +275,7 @@ namespace Projekt_POiG
             }
         }
 
-
+        
         public int pobierzMaksymalneId(string constring, string Query)
         {
             int id1 = 0;
@@ -319,7 +319,7 @@ namespace Projekt_POiG
             }
             return id1;
         }
-
+        
 
     }
 }
