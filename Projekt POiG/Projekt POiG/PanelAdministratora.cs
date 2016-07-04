@@ -32,50 +32,50 @@ namespace Projekt_POiG
         void PobierzUzytkownikaiKsiazkeZComboBox3()
         {
             CzyJestZarezerwowana = "";
-             wybranaksiazka = "";
-                string pobranyitemzlistbox = "";
-                pobranyitemzlistbox = listBox3.SelectedItem.ToString();
-                int index = pobranyitemzlistbox.IndexOf(":");
-                string poszukiwanystring = pobranyitemzlistbox;
-                wybranyuzytkownikdofillcombo5 = "";
-                int i = 0;
-                index++;
-                                    foreach (char s in poszukiwanystring)
-                                    {
-                                        if (i < index)
-                                        {
-                                            CzyJestZarezerwowana += poszukiwanystring[i];
-                                        }
-
-                                       
-                                        if (i >= index)
-                                        {
-                                            wybranaksiazka += poszukiwanystring[i];
-                                        }
-                                        i++;
-
-
-                                    }
-                i = 0;
-
-                 uzytkownik = "";
-                string pobranycombobox = "";
-                pobranycombobox = comboBox5.SelectedItem.ToString();
-                int index1 = pobranycombobox.IndexOf(":");
-                foreach (char s in pobranycombobox)
+            wybranaksiazka = "";
+            string pobranyitemzlistbox = "";
+            pobranyitemzlistbox = listBox3.SelectedItem.ToString();
+            int index = pobranyitemzlistbox.IndexOf(":");
+            string poszukiwanystring = pobranyitemzlistbox;
+            wybranyuzytkownikdofillcombo5 = "";
+            int i = 0;
+            index++;
+            foreach (char s in poszukiwanystring)
+            {
+                if (i < index)
                 {
-                    if (i > index1)
-                    {
-                        uzytkownik += pobranycombobox[i];
-                    }
-                    i++;
-
+                    CzyJestZarezerwowana += poszukiwanystring[i];
                 }
+
+
+                if (i >= index)
+                {
+                    wybranaksiazka += poszukiwanystring[i];
+                }
+                i++;
+
+
+            }
+            i = 0;
+
+            uzytkownik = "";
+            string pobranycombobox = "";
+            pobranycombobox = comboBox5.SelectedItem.ToString();
+            int index1 = pobranycombobox.IndexOf(":");
+            foreach (char s in pobranycombobox)
+            {
+                if (i > index1)
+                {
+                    uzytkownik += pobranycombobox[i];
+                }
+                i++;
+
+            }
         }
         void OnClickFillcomboBox5()
         {
             listBox3.Items.Clear();
-            int licznik =0;
+            int licznik = 0;
             int iduzytkownika = 0;
             User u1 = new User();
             iduzytkownika = u1.pobierzId(wybranyuzytkownikdofillcombo5);
@@ -91,7 +91,7 @@ namespace Projekt_POiG
 
         void fill_listBox1()
         {
-           
+
             Book myClass = new Book();
             ksiazkidolisty = myClass.zapelnijcombobox();
             int licznik = 0;
@@ -213,7 +213,7 @@ namespace Projekt_POiG
             }
             else
             {
-
+               
 
                 int index = names[id].IndexOf(":");
                 string poszukiwanystring = names[id];
@@ -229,10 +229,21 @@ namespace Projekt_POiG
                     i++;
 
                 }
-                User myClass = new User();
+                if (ObecnieZalogowanyUzytkownik == login)
+                {
+                    MessageBox.Show("Nie możesz usunąć samego siebie! Poproś innego administratora o usunięcie twojego konta");
+                }
+                else
+                {
+                    int idusera = 0;
+                    User myClass = new User();
+                    Library UsunWyporzyczenieDlaUsunietegoUsera = new Library();
 
-                myClass.usunuzytkownika(login);
-                fill_comboBox1();
+                    myClass.usunuzytkownika(login);
+                    idusera = myClass.pobierzId(login);
+                    UsunWyporzyczenieDlaUsunietegoUsera.UsunWyporzyczoneKsiazkiTamGdzieZostalUsunietyUzytkownik(idusera);
+                    fill_comboBox1();
+                }
 
             }
 
@@ -357,6 +368,7 @@ namespace Projekt_POiG
         {
             if (tytul != "")
             {
+
                 bool CzyPodanaKsiazkaZostalaJuzWyporzyczona = false;
                 int maksymalneIDWyporzyczenia;
                 Book pobierztuId = new Book();
@@ -373,6 +385,7 @@ namespace Projekt_POiG
                 {
                     maksymalneIDWyporzyczenia = Biblioteka.pobierzMaksymalneId(constring, Query);
                     Biblioteka.WniosekORezerwacje(maksymalneIDWyporzyczenia, idksiazki, idusera);
+                   
                 }
                 else
                     MessageBox.Show("Nie możesz wyporzyczyc kolejny raz tej samej ksiazki!");
@@ -400,28 +413,28 @@ namespace Projekt_POiG
                     Book pobierztuId = new Book();
                     obecneIdKsiazkiZComboBox3 = pobierztuId.pobierzId(wybranaksiazka);
                     Library Pozycz = new Library();
-                   
+
                     User pobierztuIdusera = new User();
                     obecneIdUseraZComboBox3 = pobierztuIdusera.pobierzId(uzytkownik);
 
                     DateTime when = DateTime.Today;
                     DateTime miesiacpozniej;
                     miesiacpozniej = when.AddMonths(1);
-                    
+
                     Pozycz.ZmienDate(obecneIdKsiazkiZComboBox3, obecneIdUseraZComboBox3, miesiacpozniej);
                     int jk;
-                    
+
                     listBox3.Items.Clear();
-                    comboBox5_SelectedIndexChanged(sender,e);
+                    comboBox5_SelectedIndexChanged(sender, e);
                 }
                 else
                     MessageBox.Show("Można pożyczyć tylko książki które zostały uprzednio zarezerwowane!");
 
 
-                                    }
-               
             }
-        
+
+        }
+
 
         private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -452,7 +465,7 @@ namespace Projekt_POiG
                 }
                 OnClickFillcomboBox5();
             }
-            
+
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -490,5 +503,38 @@ namespace Projekt_POiG
 
             }
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            int id = 0;
+            id = listBox3.SelectedIndex;
+            if (id == -1)
+            {
+                MessageBox.Show("Proszę wybrać książkę którą chcesz oddać!");
+            }
+            else
+            {
+                int obecneIdKsiazkiZComboBox3 = 0;
+                int obecneIdUseraZComboBox3 = 0;
+                PobierzUzytkownikaiKsiazkeZComboBox3();
+
+                Book pobierztuId = new Book();
+                obecneIdKsiazkiZComboBox3 = pobierztuId.pobierzId(wybranaksiazka);
+                Library Pozycz = new Library();
+
+                User pobierztuIdusera = new User();
+                obecneIdUseraZComboBox3 = pobierztuIdusera.pobierzId(uzytkownik);
+
+
+
+                Pozycz.OddajKsiazke(obecneIdKsiazkiZComboBox3, obecneIdUseraZComboBox3);
+                int jk;
+
+                listBox3.Items.Clear();
+                comboBox5_SelectedIndexChanged(sender, e);
+
+            }
+        }
+
     }
 }

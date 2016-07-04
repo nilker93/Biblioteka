@@ -14,6 +14,76 @@ namespace Projekt_POiG
     class Library
     {
 
+        public void UsunWyporzyczoneKsiazkiTamGdzieZostalaUsunietaKsiazka(int idksiazki)
+        {
+            string constring1 = "SERVER=localhost;DATABASE=biblioteka;UID=root;password=;";
+            string Query11 = "delete from wyporzyczanie where idk like " + idksiazki + ";";
+            MySqlConnection conDataBase11 = new MySqlConnection(constring1);
+
+            //DateTime miesiacpozniej;
+            // miesiacpozniej = when.AddMonths(1);
+            MySqlCommand cmdDataBase11 = new MySqlCommand(Query11, conDataBase11);
+            MySqlDataReader myReader11;
+            try
+            {
+                conDataBase11.Open();
+                myReader11 = cmdDataBase11.ExecuteReader();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+
+        public void UsunWyporzyczoneKsiazkiTamGdzieZostalUsunietyUzytkownik( int isOsoby)
+        {
+            string constring1 = "SERVER=localhost;DATABASE=biblioteka;UID=root;password=;";
+            string Query11 = "delete from wyporzyczanie where ido like " + isOsoby + ";";
+            MySqlConnection conDataBase11 = new MySqlConnection(constring1);
+
+            //DateTime miesiacpozniej;
+            // miesiacpozniej = when.AddMonths(1);
+            MySqlCommand cmdDataBase11 = new MySqlCommand(Query11, conDataBase11);
+            MySqlDataReader myReader11;
+            try
+            {
+                conDataBase11.Open();
+                myReader11 = cmdDataBase11.ExecuteReader();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+
+        public void OddajKsiazke(int idKsiazki, int isOsoby)
+        {
+            string constring1 = "SERVER=localhost;DATABASE=biblioteka;UID=root;password=;";
+            string Query11 = "delete from wyporzyczanie where idk like " + idKsiazki + " and ido like " + isOsoby + ";";
+            MySqlConnection conDataBase11 = new MySqlConnection(constring1);
+            
+            //DateTime miesiacpozniej;
+            // miesiacpozniej = when.AddMonths(1);
+            MySqlCommand cmdDataBase11 = new MySqlCommand(Query11, conDataBase11);
+            MySqlDataReader myReader11;
+            try
+            {
+                conDataBase11.Open();
+                myReader11 = cmdDataBase11.ExecuteReader();
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+           
+        }
         
 
         public DateTime ZwrocDate(int idKsiazki, int isOsoby)

@@ -249,6 +249,7 @@
             this.button10.TabIndex = 23;
             this.button10.Text = "Oddaj książkę";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // comboBox5
             // 
