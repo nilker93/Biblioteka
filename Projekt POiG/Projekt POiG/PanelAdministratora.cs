@@ -238,10 +238,10 @@ namespace Projekt_POiG
                     int idusera = 0;
                     User myClass = new User();
                     Library UsunWyporzyczenieDlaUsunietegoUsera = new Library();
-
-                    myClass.usunuzytkownika(login);
                     idusera = myClass.pobierzId(login);
                     UsunWyporzyczenieDlaUsunietegoUsera.UsunWyporzyczoneKsiazkiTamGdzieZostalUsunietyUzytkownik(idusera);
+                    myClass.usunuzytkownika(login);
+                    
                     fill_comboBox1();
                 }
 
@@ -280,7 +280,17 @@ namespace Projekt_POiG
                     i++;
 
                 }
+                int idksiazki = 0;
                 Book myClass = new Book();
+                Library UsunWyporzyczenieDlaUsunietegoUsera = new Library();
+                idksiazki = myClass.pobierzId(tytul);
+                UsunWyporzyczenieDlaUsunietegoUsera.UsunWyporzyczoneKsiazkiTamGdzieZostalaUsunietaKsiazka(idksiazki);
+                
+                    
+
+
+
+                
 
                 myClass.usunKsiazke(tytul);
                 fill_comboBox1();
