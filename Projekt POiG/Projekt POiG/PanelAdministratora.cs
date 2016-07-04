@@ -388,7 +388,7 @@ namespace Projekt_POiG
             id = listBox3.SelectedIndex;
             if (id == -1)
             {
-                MessageBox.Show("Proszę wybrać książkę którą chcesz oddać!");
+                MessageBox.Show("Proszę wybrać książkę którą chcesz pożyczyć!");
             }
             else
             {
@@ -410,13 +410,16 @@ namespace Projekt_POiG
                     
                     Pozycz.ZmienDate(obecneIdKsiazkiZComboBox3, obecneIdUseraZComboBox3, miesiacpozniej);
                     int jk;
+                    
+                    listBox3.Items.Clear();
+                    comboBox5_SelectedIndexChanged(sender,e);
                 }
                 else
                     MessageBox.Show("Można pożyczyć tylko książki które zostały uprzednio zarezerwowane!");
 
 
                                     }
-                int k;
+               
             }
         
 
@@ -450,6 +453,42 @@ namespace Projekt_POiG
                 OnClickFillcomboBox5();
             }
             
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            int id = 0;
+            id = listBox3.SelectedIndex;
+            if (id == -1)
+            {
+                MessageBox.Show("Proszę wybrać książkę której chcesz przedłużyć termin!");
+            }
+            else
+            {
+                int obecneIdKsiazkiZComboBox3 = 0;
+                int obecneIdUseraZComboBox3 = 0;
+                PobierzUzytkownikaiKsiazkeZComboBox3();
+                if (CzyJestZarezerwowana == "Wypożyczona:")
+                {
+                    Book pobierztuId = new Book();
+                    obecneIdKsiazkiZComboBox3 = pobierztuId.pobierzId(wybranaksiazka);
+                    Library Pozycz = new Library();
+
+                    User pobierztuIdusera = new User();
+                    obecneIdUseraZComboBox3 = pobierztuIdusera.pobierzId(uzytkownik);
+
+
+                    DateTime miesiacpozniej;
+
+                    miesiacpozniej = Pozycz.ZwrocDate(obecneIdKsiazkiZComboBox3, obecneIdUseraZComboBox3);
+                    Pozycz.ZmienDate(obecneIdKsiazkiZComboBox3, obecneIdUseraZComboBox3, miesiacpozniej);
+                    int jk;
+                }
+                else
+                    MessageBox.Show("Można przedłużać rezerwację tylko wypożyczonych książek!");
+
+
+            }
         }
     }
 }

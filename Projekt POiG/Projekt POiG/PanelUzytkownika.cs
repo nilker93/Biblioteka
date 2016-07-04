@@ -24,6 +24,41 @@ namespace Projekt_POiG
         string tytul= "";
         string[] ksiazkidolisty = new string[100];
         string[] info = new string[100];
+
+        string CzyJestZarezerwowana = "";
+        string wybranaksiazka = "";
+        void PobierzUzytkownikaiKsiazkeZComboBox3()
+        {
+            CzyJestZarezerwowana = "";
+            wybranaksiazka = "";
+            string pobranyitemzlistbox = "";
+            pobranyitemzlistbox = listBox3.SelectedItem.ToString();
+            int index = pobranyitemzlistbox.IndexOf(":");
+            string poszukiwanystring = pobranyitemzlistbox;
+            
+            int i = 0;
+            index++;
+            foreach (char s in poszukiwanystring)
+            {
+                if (i < index)
+                {
+                    CzyJestZarezerwowana += poszukiwanystring[i];
+                }
+
+
+                if (i >= index)
+                {
+                    wybranaksiazka += poszukiwanystring[i];
+                }
+                i++;
+
+
+            }
+            i = 0;
+
+            
+        }
+
         public void SesjaUser(string uzytkownik)
         {
             ObecnieZalogowanyUzytkownik = uzytkownik;
@@ -99,7 +134,38 @@ namespace Projekt_POiG
 
         private void button2_Click(object sender, EventArgs e)
         {
+            int id = 0;
+            id = listBox3.SelectedIndex;
+            if (id == -1)
+            {
+                MessageBox.Show("Proszę wybrać książkę której chcesz przedłużyć termin!");
+            }
+            else
+            {
+                int obecneIdKsiazkiZComboBox3 = 0;
+                int obecneIdUseraZComboBox3 = 0;
+                PobierzUzytkownikaiKsiazkeZComboBox3();
+                if (CzyJestZarezerwowana == "Wypożyczona:")
+                {
+                    Book pobierztuId = new Book();
+                    obecneIdKsiazkiZComboBox3 = pobierztuId.pobierzId(wybranaksiazka);
+                    Library Pozycz = new Library();
 
+                    User pobierztuIdusera = new User();
+                    obecneIdUseraZComboBox3 = pobierztuIdusera.pobierzId(ObecnieZalogowanyUzytkownik);
+
+                    
+                    DateTime miesiacpozniej;
+                   
+                    miesiacpozniej = Pozycz.ZwrocDate(obecneIdKsiazkiZComboBox3, obecneIdUseraZComboBox3);
+                    Pozycz.ZmienDate(obecneIdKsiazkiZComboBox3, obecneIdUseraZComboBox3, miesiacpozniej);
+                    int jk;
+                }
+                else
+                    MessageBox.Show("Można przedłużać rezerwację tylko wypożyczonych książek!");
+
+
+            }
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)

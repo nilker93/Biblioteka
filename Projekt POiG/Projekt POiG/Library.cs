@@ -13,6 +13,39 @@ namespace Projekt_POiG
 {
     class Library
     {
+
+        
+
+        public DateTime ZwrocDate(int idKsiazki, int isOsoby)
+        {
+            string constring1 = "SERVER=localhost;DATABASE=biblioteka;UID=root;password=;Convert Zero Datetime=True";
+            string Query11 = "select * from wyporzyczanie where idk like '" + idKsiazki + "' and ido like " + isOsoby + ";";
+            MySqlConnection conDataBase11 = new MySqlConnection(constring1);
+            DateTime when = DateTime.Today;
+            //DateTime miesiacpozniej;
+           // miesiacpozniej = when.AddMonths(1);
+            MySqlCommand cmdDataBase11 = new MySqlCommand(Query11, conDataBase11);
+            MySqlDataReader myReader11;
+            try
+            {
+                conDataBase11.Open();
+                myReader11 = cmdDataBase11.ExecuteReader();
+                while (myReader11.Read())
+                {
+                    when = myReader11.GetDateTime("data1");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            conDataBase11.Close();
+            DateTime data;
+            data = when.AddMonths(1);
+            
+            return data;
+        }
+
         public void ZmienDate(int idKsiazki, int isOsoby, DateTime data)
         {
             string constring = "SERVER=localhost;DATABASE=biblioteka;UID=root;password=";
